@@ -5,6 +5,7 @@ import com.greenox.order.domain.Order;
 import com.greenox.order.util.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
@@ -20,6 +21,7 @@ public class OrderDao {
         order.setOrderNumber(101 + orderCountOnDay());
         order.setOrderTime(LocalDateTime.now());
         order.setStatus(Constants.ORDER_STATUS.NEW);
+        order.setCashier(SecurityContextHolder.getContext().getAuthentication().getName());
         if (order.getSource() != Constants.ORDER_SOURCE.Kiosk) {
             order.setPayment(null);
         }
@@ -34,6 +36,8 @@ public class OrderDao {
     public void updateOrderStatus(String id, Constants.ORDER_STATUS status) {
         Order order = orderRepository.findById(id).get();
         order.setStatus(status);
+        order.setServer(SecurityContextHolder.getContext().getAuthentication().getName());
+        order.setServeTime(LocalDateTime.now());
         final Order save = orderRepository.save(order);
     }
 

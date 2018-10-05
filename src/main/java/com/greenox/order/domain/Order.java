@@ -27,6 +27,33 @@ public class Order {
     private int netTotal;
     private PAYMENT_MODE payment;
     private String note;
+    private String cashier;
+    private String server;
+    private LocalDateTime serveTime;
+
+    public LocalDateTime getServeTime() {
+        return serveTime;
+    }
+
+    public void setServeTime(LocalDateTime serveTime) {
+        this.serveTime = serveTime;
+    }
+
+    public String getCashier() {
+        return cashier;
+    }
+
+    public void setCashier(String cashier) {
+        this.cashier = cashier;
+    }
+
+    public String getServer() {
+        return server;
+    }
+
+    public void setServer(String server) {
+        this.server = server;
+    }
 
     public String getId() {
         return id;
