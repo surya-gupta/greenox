@@ -13,7 +13,7 @@ import java.util.List;
 
 @Secured({"ROLE_ORDER_ENTRY"})
 @RestController
-@RequestMapping(value = "order")
+@RequestMapping(value = "/api/order")
 public class OrderController {
     private static final Logger LOG = LoggerFactory.getLogger(OrderController.class);
     @Autowired
@@ -22,11 +22,13 @@ public class OrderController {
     @RequestMapping(value = "open", method = RequestMethod.GET)
     public @ResponseBody
     List<Order> allOpenOrders() {
+        LOG.info("Calling allOpenOrders");
         return orderDao.allOpenOrders();
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public Order addOrder(@RequestBody Order order) {
+        LOG.info("Calling addOrder");
         return orderDao.addOrder(order);
     }
 
@@ -39,6 +41,7 @@ public class OrderController {
     @RequestMapping(value = "update/{id}/status/{status}", method = RequestMethod.GET)
     public @ResponseBody
     void updateOrderStatus(@PathVariable String id, @PathVariable Constants.ORDER_STATUS status) {
+        LOG.info("Calling updateOrderStatus");
         orderDao.updateOrderStatus(id, status);
     }
 }
