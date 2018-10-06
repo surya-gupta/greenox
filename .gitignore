@@ -1,6 +1,6 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
-
+/node_modules/
 ### STS ###
 .apt_generated
 .classpath
@@ -20,10 +20,10 @@
 /nbproject/private/
 /build/
 /nbbuild/
-/dist/
 /nbdist/
 /.nb-gradle/
 .mvn/wrapper/maven-wrapper.jar
 mvnw
 mvnw.cmd
 .mvn
+src/ui/node_modules/

@@ -2,24 +2,17 @@ package com.greenox.order.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.session.ExpiringSession;
-import org.springframework.session.MapSessionRepository;
-import org.springframework.session.SessionRepository;
-import org.springframework.session.config.annotation.web.http.EnableSpringHttpSession;
-import org.springframework.session.web.http.HeaderHttpSessionStrategy;
-import org.springframework.session.web.http.HttpSessionStrategy;
+import org.springframework.session.data.mongo.JdkMongoSessionConverter;
+import org.springframework.session.data.mongo.config.annotation.web.http.EnableMongoHttpSession;
+
+import java.time.Duration;
 
 @Configuration
-@EnableSpringHttpSession
+@EnableMongoHttpSession
 public class HttpSessionConfig {
 
     @Bean
-    SessionRepository<ExpiringSession> inmemorySessionRepository() {
-        return new MapSessionRepository();
-    }
-
-    @Bean
-    HttpSessionStrategy httpSessionStrategy() {
-        return new HeaderHttpSessionStrategy();
+    public JdkMongoSessionConverter jdkMongoSessionConverter() {
+        return new JdkMongoSessionConverter(Duration.ofMinutes(30));
     }
 }
