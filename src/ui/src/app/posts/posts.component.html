@@ -1,9 +1,10 @@
-<h1>Posts</h1>
+<h1>Orders</h1>
 
 <ul>
-  <li *ngFor="let post of posts$">
-    <a routerLink="">{{ post.title }}</a>
-
-    <p>{{ post.body }}</p>
+  <li *ngFor="let order of orders$">
+    <a routerLink="">Order Number : {{ order.orderNumber }} , Order Time : {{ order.orderTime | date : "medium" : "IST" }} , Order Source: {{ order.source }} </a>
+    <ul>
+      <li *ngFor="let item of order.items">{{ item.name}}  quantity :{{ item.quantity}}</li>
+    </ul>
   </li>
 </ul>

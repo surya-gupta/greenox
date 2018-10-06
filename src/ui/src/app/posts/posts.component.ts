@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-  posts$: Object;
+  orders$: Object;
   
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getPosts().subscribe(
-      data => this.posts$ = data 
+    this.data.getOrders().subscribe(
+      data => this.orders$ = data
     );
   }
 

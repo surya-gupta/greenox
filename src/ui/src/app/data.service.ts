@@ -10,8 +10,8 @@ export class DataService {
     return this.http.get('https://jsonplaceholder.typicode.com/users/'+userId)
   }
 
-  getPosts() {
-    return this.http.get('http://localhost:8080/api/order/open')
+  getOrders() {
+    return this.http.get('api/order/open')
   }
 
   getUsers() {
