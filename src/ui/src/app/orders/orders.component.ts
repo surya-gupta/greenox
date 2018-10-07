@@ -3,11 +3,11 @@ import { DataService } from '../data.service';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-posts',
-  templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.scss']
+  selector: 'app-orders',
+  templateUrl: './orders.component.html',
+  styleUrls: ['./orders.component.scss']
 })
-export class PostsComponent implements OnInit {
+export class OrdersComponent implements OnInit {
   orders$: Object;
   
   constructor(private data: DataService) { }

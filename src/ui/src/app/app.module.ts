@@ -5,17 +5,17 @@ import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { PostsComponent } from './posts/posts.component';
+import { OrdersComponent } from './orders/orders.component';
 import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component'; 
-import { HttpClientModule } from '@angular/common/http';  // <-Add here
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    PostsComponent,
+    OrdersComponent,
     UsersComponent,
     DetailsComponent
   ],
