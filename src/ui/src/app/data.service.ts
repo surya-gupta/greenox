@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core'; 
 import { HttpClient } from '@angular/common/http';
+import { Order } from './shared/order';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +13,7 @@ export class DataService {
   }
 
   getOrders() {
-    return this.http.get('api/order/open')
+    return this.http.get<Order[]>('api/order/open')
   }
 
   getUsers() {

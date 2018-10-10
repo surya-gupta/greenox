@@ -2,9 +2,9 @@
 
 <ul>
   <li *ngFor="let order of orders$">
-    <a routerLink="">Order Number : {{ order.orderNumber }} , Order Time : {{ order.orderTime | date : "d/M h:mm a" : "IST" }} , Order Source: {{ order.source }} </a>
+    <h2># {{ order.orderNumber }} , <i class="material-icons">av_timer</i> {{ order.orderTime | date : "d/M h:mm a" : "IST" }} , <i class="material-icons">restaurant_menu</i> {{ order.source }} <button><i class="material-icons">done</i></button><button><i class="material-icons">cancel</i></button></h2>
     <ul>
-      <li *ngFor="let item of order.items">{{ item.name}}  quantity :{{ item.quantity}}</li>
+      <li *ngFor="let item of order.items"><h4>{{ item.name}}  quantity :{{ item.quantity}}</h4></li>
     </ul>
   </li>
 </ul>
