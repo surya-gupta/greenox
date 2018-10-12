@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Observable } from 'rxjs';
 import { Order } from '../shared/order';
 
 @Component({
@@ -9,13 +8,13 @@ import { Order } from '../shared/order';
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
-  orders$: Order[];
-  
+  orders: Order[];
+
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.data.getOrders().subscribe(
-      data => this.orders$ = data
+      data => this.orders = data
     );
   }
 
