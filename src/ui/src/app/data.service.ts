@@ -14,7 +14,7 @@ export class DataService {
   }
 
   getOrders() : Observable<Order[]> {
-    return this.http.get<Order[]>('http://localhost:8080/api/order/open')
+    return this.http.get<Order[]>('api/order/open')
   }
 
   getUsers() {
