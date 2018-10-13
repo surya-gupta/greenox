@@ -1,0 +1,19 @@
+
+<h2>My Order</h2>
+<ul class="order">
+  <li *ngFor="let o of orders" (click)="onSelect(o)" [class.selected]="o===selectedOrder" (click)=onSelect(o)>
+    <span class="badge">{{o.id}}</span>{{o.name}}
+    </li>
+</ul>
+<div *ngIf="selectedOrder">
+    <h2>{{selectedOrder.name | uppercase}}</h2> <div><span>Id:</span>{{selectedOrder.id}}</div>> 
+    <div>
+        <label>name:
+          <input [(ngModel)]="selectedOrder.name" placeholder="name">
+        </label>
+      </div>
+</div>
+  place-order works!
+  {{orderInfo.name | uppercase }} detail
+
+  

@@ -10,20 +10,25 @@ import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { PlaceOrderComponent } from './place-order/place-order.component';
+import { FormsModule} from '@angular/forms';
+import { OrderDetailComponent } from './order-detail/order-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     OrdersComponent,
     UsersComponent,
-    DetailsComponent
+    DetailsComponent,
+    PlaceOrderComponent,
+    OrderDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

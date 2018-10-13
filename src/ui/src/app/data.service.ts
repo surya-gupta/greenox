@@ -14,7 +14,9 @@ export class DataService {
   getOrders() {
     return this.http.get('api/order/open')
   }
-
+addOrder(order){
+ return this.http.get('api/order/open')
+}
   getUsers() {
     return this.http.get('https://jsonplaceholder.typicode.com/users')
   }
