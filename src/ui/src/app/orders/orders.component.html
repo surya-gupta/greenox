@@ -1,10 +1,30 @@
 <h1>Orders</h1>
-
-<ul>
-  <li *ngFor="let order of orders$">
-    <a routerLink="">Order Number : {{ order.orderNumber }} , Order Time : {{ order.orderTime | date : "d/M h:mm a" : "IST" }} , Order Source: {{ order.source }} </a>
-    <ul>
-      <li *ngFor="let item of order.items">{{ item.name}}  quantity :{{ item.quantity}}</li>
-    </ul>
-  </li>
-</ul>
+<div>
+  <table border="1">
+    <thead>
+      <th>#</th>
+      <th>Source</th>
+      <th>Order Time</th>
+      <th>Timer</th>
+      <th>Prepared</th>
+      <th>Cancel</th>
+    </thead>
+    <tbody *ngFor="let order of orders">
+      <tr>
+        <td>{{ order.orderNumber }}</td>
+        <td>{{ order.source }} </td>
+        <td>{{ order.orderTime | date : "d/M h:mm a" : "IST" }}</td>
+        <td>5 m 20 s</td>
+        <td><button mat-button><i class="material-icons">done</i></button></td>
+        <td><button mat-button><i class="material-icons">cancel</i></button></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <ul>
+            <li *ngFor="let item of order.items">{{item.name}} X {{item.quantity}}</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
