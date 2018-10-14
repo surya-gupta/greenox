@@ -40,7 +40,7 @@ public class RestSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .permitAll()
-                .and().csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+                .and().csrf().disable();
     }
 
     @Autowired
