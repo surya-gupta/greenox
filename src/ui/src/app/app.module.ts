@@ -10,6 +10,7 @@ import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
+import { GetValuesPipe } from './shared/GetValuesPipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MaterialModule } from './material';
     SidebarComponent,
     OrdersComponent,
     UsersComponent,
-    DetailsComponent
+    DetailsComponent,
+    GetValuesPipe
   ],
   imports: [
     BrowserModule,

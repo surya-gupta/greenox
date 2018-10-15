@@ -1,8 +1,12 @@
 package com.greenox.order.dao;
 
+import com.greenox.order.domain.Customer;
 import com.greenox.order.domain.Item;
 import com.greenox.order.domain.Order;
 import com.greenox.order.util.Constants;
+import com.greenox.order.util.SendWhatsAppNotification;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -11,11 +15,16 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class OrderDao {
+
+    private static final Logger LOG = LoggerFactory.getLogger(OrderDao.class);
     @Autowired
     private OrderRepository orderRepository;
+    @Autowired
+    private SendWhatsAppNotification notify;
 
     public Order addOrder(Order order) {
         order.setOrderNumber(101 + orderCountOnDay());
@@ -39,6 +48,18 @@ public class OrderDao {
         order.setServer(SecurityContextHolder.getContext().getAuthentication().getName());
         order.setServeTime(LocalDateTime.now());
         final Order save = orderRepository.save(order);
+        Customer customer = order.getCustomer();
+        String items = order.getItems().stream().map(Item::getName).collect(Collectors.joining(","));
+        if (customer != null && customer.getPhoneNumber() != null) {
+            String text = "Dear _%s_, your Order# *%s* is *%s*  item(s) : %s";
+            String response = notify.sendNotification(customer.getPhoneNumber(),
+                    String.format(text,
+                            customer.getName(),
+                            order.getOrderNumber(),
+                            order.getStatus().toString().toLowerCase(),
+                            items));
+            LOG.info("Notified Order {} with response {}", order.getId(), response);
+        }
     }
 
     private long orderCountOnDay() {

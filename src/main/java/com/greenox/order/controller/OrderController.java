@@ -2,6 +2,7 @@ package com.greenox.order.controller;
 
 import com.greenox.order.dao.OrderDao;
 import com.greenox.order.domain.Order;
+import com.greenox.order.domain.OrderAndSummary;
 import com.greenox.order.util.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +22,11 @@ public class OrderController {
 
     @RequestMapping(value = "open", method = RequestMethod.GET)
     public @ResponseBody
-    List<Order> allOpenOrders() {
+    OrderAndSummary allOpenOrders() {
         LOG.info("Calling allOpenOrders");
-        return orderDao.allOpenOrders();
+        OrderAndSummary orderAndSummary = new OrderAndSummary();
+        orderAndSummary.setOrders(orderDao.allOpenOrders());
+        return orderAndSummary;
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
