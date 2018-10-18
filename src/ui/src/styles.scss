@@ -3,18 +3,21 @@
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 body {
     margin: 0;
-    background: #F2F2F2;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: 'Ubuntu Mono', monospace;
     height: 100vh;
     font-size: 18px
 }
 
 #container {
    display: grid;
-   grid-template-columns: 70px auto;
+   grid-template-columns: 50px auto;
    height: 100%;
 
    #content {
-       padding: 30px 50px;
+       padding-left: 20px;
+       padding-right: 20px;
    }
+}
+mat-tab-group{
+    font-family: 'Ubuntu Mono', monospace;
 }

@@ -1,0 +1,42 @@
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Order
+    </ng-template>
+    <app-inventory-order></app-inventory-order>
+    <br />
+    <br />
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      View
+    </ng-template>
+    <app-inventory-view></app-inventory-view>
+    <br />
+    <br />
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Update
+    </ng-template>
+    <app-inventory-update></app-inventory-update>
+    <br />
+    <br />
+  </mat-tab>
+  <mat-tab>
+      <ng-template mat-tab-label>
+        Vendors
+      </ng-template>
+      <app-inventory-vendors></app-inventory-vendors>
+      <br />
+      <br />
+    </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Expense Reports
+    </ng-template>
+    <app-inventory-reports></app-inventory-reports>
+    <br />
+    <br />
+  </mat-tab>
+</mat-tab-group>
