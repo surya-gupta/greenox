@@ -11,12 +11,21 @@ nav {
 
             a {
                 color: #fff;
-                padding: 20px;
+                padding: 10px;
                 display: block;
             }
 
             .activated {
-                background-color: #00a8ff;
+                background-color: #4CAF50;
+            }
+        }
+
+        li:last-child{
+            position:absolute; bottom:0;left: 0;
+            img{
+                height: 30px;
+                width: 30px;
+                padding: 10px;
             }
         }
     }
