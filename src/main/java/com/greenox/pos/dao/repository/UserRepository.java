@@ -1,4 +1,4 @@
-package com.greenox.pos.dao;
+package com.greenox.pos.dao.repository;
 
 import com.greenox.pos.domain.User;
 import org.springframework.data.mongodb.repository.MongoRepository;

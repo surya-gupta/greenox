@@ -1,4 +1,4 @@
-package com.greenox.pos.domain;
+package com.greenox.pos.domain.inventory;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.greenox.pos.util.Constants;

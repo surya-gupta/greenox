@@ -1,7 +1,6 @@
 package com.greenox.pos.domain.inventory;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.greenox.pos.domain.Vendor;
 import com.greenox.pos.util.Constants;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -10,6 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Document(collection = "inventory-pos")
 public class InventoryOrder {
@@ -22,7 +23,7 @@ public class InventoryOrder {
     private LocalDateTime completionTime;
     private Constants.INVENTORY_STATUS status;
     private List<String> notes;
-    private Map<String,List<InventoryItem>> categorisedItems;
+    private Set<InventoryCategorised> categorisedItems;
     private Float netAmount;
     private Float advanceAmount;
     private Float pendingAmount;
@@ -82,11 +83,35 @@ public class InventoryOrder {
         this.notes = notes;
     }
 
-    public Map<String, List<InventoryItem>> getCategorisedItems() {
+    public Set<InventoryCategorised> getCategorisedItems() {
         return categorisedItems;
     }
 
-    public void setCategorisedItems(Map<String, List<InventoryItem>> categorisedItems) {
+    public void setCategorisedItems(Set<InventoryCategorised> categorisedItems) {
         this.categorisedItems = categorisedItems;
+    }
+
+    public Float getNetAmount() {
+        return netAmount;
+    }
+
+    public void setNetAmount(Float netAmount) {
+        this.netAmount = netAmount;
+    }
+
+    public Float getAdvanceAmount() {
+        return advanceAmount;
+    }
+
+    public void setAdvanceAmount(Float advanceAmount) {
+        this.advanceAmount = advanceAmount;
+    }
+
+    public Float getPendingAmount() {
+        return pendingAmount;
+    }
+
+    public void setPendingAmount(Float pendingAmount) {
+        this.pendingAmount = pendingAmount;
     }
 }

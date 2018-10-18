@@ -1,7 +1,13 @@
 package com.greenox.pos.dao;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.greenox.pos.dao.repository.InventoryOrderRepository;
+import com.greenox.pos.dao.repository.InventoryRepository;
+import com.greenox.pos.dao.repository.VendorRepository;
 import com.greenox.pos.domain.inventory.Inventory;
+import com.greenox.pos.domain.inventory.Vendor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,8 +17,13 @@ import java.io.InputStreamReader;
 
 @Component
 public class InventoryDao {
+    private static final Logger LOG = LoggerFactory.getLogger(InventoryDao.class);
     @Autowired
-    InventoryRepository inventoryRepository;
+    private InventoryRepository inventoryRepository;
+    @Autowired
+    private InventoryOrderRepository inventoryOrderRepository;
+    @Autowired
+    private VendorRepository vendorRepository;
 
     private void loadInventory() {
         StringBuilder text = new StringBuilder();
@@ -32,5 +43,11 @@ public class InventoryDao {
 
             }
         }
+    }
+
+    private Vendor createOrUpdateVendor(Vendor vendor) {
+       vendor=vendorRepository.save(vendor);
+       LOG.info("Vendor updated/saved {}",vendor.getName());
+       return vendor;
     }
 }

@@ -57,4 +57,19 @@ public class InventoryItem{
     public void setNotes(List<String> notes) {
         this.notes = notes;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof InventoryItem)) return false;
+
+        InventoryItem that = (InventoryItem) o;
+
+        return getItem().equals(that.getItem());
+    }
+
+    @Override
+    public int hashCode() {
+        return getItem().hashCode();
+    }
 }

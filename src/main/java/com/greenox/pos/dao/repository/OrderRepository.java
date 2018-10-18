@@ -1,4 +1,4 @@
-package com.greenox.pos.dao;
+package com.greenox.pos.dao.repository;
 
 import com.greenox.pos.domain.order.Order;
 import org.springframework.data.domain.Sort;

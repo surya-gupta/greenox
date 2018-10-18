@@ -1,5 +1,6 @@
 package com.greenox.pos.dao;
 
+import com.greenox.pos.dao.repository.OrderRepository;
 import com.greenox.pos.domain.order.Customer;
 import com.greenox.pos.domain.inventory.Item;
 import com.greenox.pos.domain.order.Order;
