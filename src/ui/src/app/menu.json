@@ -1,0 +1,1290 @@
+{
+    "menus": [
+      {
+        "menu": {
+          "id": 6794703,
+          "name": "Salads",
+          "cart_category_id": 0,
+          "categories": [
+            {
+              "category": {
+                "id": 10189361,
+                "name": "Regular Salads",
+                "items": [
+                  {
+                    "item": {
+                      "id": 660495341,
+                      "name": "Watermelon Salad",
+                      "price": 70,
+                      "desc": "Large juicy red cubes of watermelon with refreshing mint leaves and cottage leaves."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660495342,
+                      "name": "Yogurt Veggie Salad",
+                      "price": 70,
+                      "desc": "Very unique taste of regular veggies dressed with curd,flavoured with green chilli ,red chilli and seasonings."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660496325,
+                      "name": "Jumble Fruit Salad",
+                      "price": 75,
+                      "desc": "A bowl of garden fresh fruits with a tangy taste of juicy lemon and seasonings."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660495343,
+                      "name": "Sweet Corn Salad",
+                      "price": 75,
+                      "desc": "Crunchy bite of fibre rich corn with sweet and creamy texture smothered in melting butter."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660495344,
+                      "name": "Sprout Veggie Salad",
+                      "price": 79,
+                      "desc": "Immune boosting and healthy choice of fully grown sprouts and freshly picked veggies topped with pomegranate seeds."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660495345,
+                      "name": "Russian Salad",
+                      "price": 89,
+                      "desc": "Mouth Watering of nutrition rich fruits and veggies dressed with cream and honey."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660495346,
+                      "name": "Soya Paneer Salad",
+                      "price": 110,
+                      "desc": "Bowl of protein rich chunks of soya added with highly nutritious veggies with a little sour taste of sauces."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "category": {
+                "id": 10189633,
+                "name": "Premium Salads",
+                "items": [
+                  {
+                    "item": {
+                      "id": 751231004,
+                      "name": "Premium Granola Fruit Salad",
+                      "price": 250,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508636,
+                      "name": "Caesar Salad",
+                      "price": 140,
+                      "desc": "A wonderful taste of superior veggies full of lettuce iceberg served with Caesar dressing and topped with croutons."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508637,
+                      "name": "Extravaganza Veggie Salad",
+                      "price": 139,
+                      "desc": "A big bowl of natures superior veggies full of broccoli topped with olives,Paneer,cherry tomatoes and sauces."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508638,
+                      "name": "Nutri Salad",
+                      "price": 149,
+                      "desc": "Full of veggies with a sour taste of sugar and vinegar added with drenched dry fruits."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508639,
+                      "name": "Mushroom Broccoli Salad",
+                      "price": 169,
+                      "desc": "A bowl full of stemed Mushroom and broccoli with assorted lettuce iceberg ,superior veggie served with lemon and vinegrette ."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508640,
+                      "name": "Wheat Pasta Salad",
+                      "price": 180,
+                      "desc": "Wheat pasta loaded with bellpeppers topped with baby corn cherry tomato black olives and seasonings."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508641,
+                      "name": "Delight Sprout Salad",
+                      "price": 189,
+                      "desc": "Delightful low calorie mix of fully grown sprouts and world's most healthy broccoli combine with drenched dry fruits topped with pomegranate seeds,paneer cubes,cherry tomato."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508642,
+                      "name": "Delight Green Salad",
+                      "price": 189,
+                      "desc": "Full of assorted lettuce ,broccoli other superior veggies drenched with almonds ,cashews ,Kismis topped with black olives ,green olives alepino."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660508643,
+                      "name": "Delight Fruit Salad",
+                      "price": 220,
+                      "desc": "Very Lazeez and colorful combi of ripen and exotic fruits loaded with khajoor ,anjeeri ,apricot and dressed with specially made rose petal jam."
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "menu": {
+          "id": 6795407,
+          "name": "Burgers ",
+          "cart_category_id": 0,
+          "categories": [
+            {
+              "category": {
+                "id": 10190559,
+                "name": "Burgers",
+                "items": [
+                  {
+                    "item": {
+                      "id": 660640941,
+                      "name": "Veg Chipotle Burger",
+                      "price": 70,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640946,
+                      "name": "Cheesy Veg Burger",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640953,
+                      "name": "Cheesy Corn Tikki Burger",
+                      "price": 90,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640956,
+                      "name": "Paneer Mania Burger",
+                      "price": 99,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640959,
+                      "name": "Crunchy Soya Burger",
+                      "price": 110,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678382780,
+                      "name": "BBQ Tofu Burger",
+                      "price": 129,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640968,
+                      "name": "Double Decker Burger",
+                      "price": 149,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640972,
+                      "name": "Mint Masala Burger",
+                      "price": 159,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640975,
+                      "name": "Creamy Spinach Burger",
+                      "price": 159,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660640979,
+                      "name": "Mushroom Slider Burger",
+                      "price": 165,
+                      "desc": ""
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "menu": {
+          "id": 6933080,
+          "name": "Sandwiches",
+          "cart_category_id": 0,
+          "categories": [
+            {
+              "category": {
+                "id": 10377006,
+                "name": "Sandwiches",
+                "items": [
+                  {
+                    "item": {
+                      "id": 678391676,
+                      "name": "Mexican Sandwich",
+                      "price": 65,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391680,
+                      "name": "Corn Sandwich",
+                      "price": 69,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391684,
+                      "name": "Mexican Paneer Sandwich",
+                      "price": 79,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391686,
+                      "name": "Mexican Cheese Sandwich",
+                      "price": 79,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391690,
+                      "name": "Corn Paneer Sandwich",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391693,
+                      "name": "Corn Cheese Sandwich",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391697,
+                      "name": "Sprout Paneer Sandwich",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391700,
+                      "name": "Cheesy Aloo Patty Sandwich",
+                      "price": 90,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391704,
+                      "name": "Paneer Aloo Patty Sandwich",
+                      "price": 90,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391707,
+                      "name": "Green Peas Sandwich",
+                      "price": 95,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391711,
+                      "name": "Plain Paneer Sandwich",
+                      "price": 100,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391715,
+                      "name": "Broccoli Sandwich",
+                      "price": 115,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391718,
+                      "name": "Chocolate Sandwich",
+                      "price": 125,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678391721,
+                      "name": "Double Tikka Sandwich",
+                      "price": 135,
+                      "desc": ""
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "menu": {
+          "id": 6794391,
+          "name": "Subs",
+          "cart_category_id": 0,
+          "categories": [
+            {
+              "category": {
+                "id": 10188910,
+                "name": "Subs",
+                "items": [
+                  {
+                    "item": {
+                      "id": 660464933,
+                      "name": "Mexican Paneer Sub",
+                      "price": 110,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660464934,
+                      "name": "Mexican Cheese Sub",
+                      "price": 110,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 661207725,
+                      "name": "Corn Paneer Sub",
+                      "price": 110,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 661207727,
+                      "name": "Corn Cheese Sub",
+                      "price": 110,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660464936,
+                      "name": "Soya Paneer Sub",
+                      "price": 130,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660464937,
+                      "name": "Cheesy Tikka Sub",
+                      "price": 159,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678387656,
+                      "name": "Extra Green Sub",
+                      "price": 179,
+                      "desc": ""
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "menu": {
+          "id": 7182538,
+          "name": "Tiny Delight",
+          "cart_category_id": 0,
+          "categories": [
+            {
+              "category": {
+                "id": 10916585,
+                "name": "Tiny Delight",
+                "items": [
+                  {
+                    "item": {
+                      "id": 749567917,
+                      "name": "Granola Yogurt",
+                      "price": 75,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 749567918,
+                      "name": "Granola Bottle [150 Grams]",
+                      "price": 119,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 754171464,
+                      "name": "Brownie",
+                      "price": 55,
+                      "desc": ""
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "menu": {
+          "id": 6793807,
+          "name": "Desserts and Beverages",
+          "cart_category_id": 0,
+          "categories": [
+            {
+              "category": {
+                "id": 10187954,
+                "name": "Beverages",
+                "items": [
+                  {
+                    "item": {
+                      "id": 660425611,
+                      "name": "Masala Lemonade",
+                      "price": 59,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425612,
+                      "name": "Virgin Mojito",
+                      "price": 59,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425613,
+                      "name": "Mint Ginger Lemonade",
+                      "price": 65,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425614,
+                      "name": "Melon Ginger Lemonade",
+                      "price": 69,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425615,
+                      "name": "Smash Blue Mojito",
+                      "price": 99,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425616,
+                      "name": "Cranberry Mojito",
+                      "price": 99,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425617,
+                      "name": "Green Apple Mojito",
+                      "price": 110,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 678402516,
+                      "name": "Black Currant Mojito",
+                      "price": 110,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425619,
+                      "name": "Kiwi Lemonade",
+                      "price": 119,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425620,
+                      "name": "Kiwi Apple Lemonade",
+                      "price": 129,
+                      "desc": ""
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "category": {
+                "id": 10187955,
+                "name": "Juices",
+                "items": [
+                  {
+                    "item": {
+                      "id": 661477166,
+                      "name": "Watermelon Juice",
+                      "price": 65,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425622,
+                      "name": "Carrot Juice",
+                      "price": 69,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425624,
+                      "name": "Mosambi Juice",
+                      "price": 75,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425625,
+                      "name": "Mix Veg Juice",
+                      "price": 80,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425626,
+                      "name": "Pineapple Juice",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425627,
+                      "name": "Mix Fruit Juice",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425628,
+                      "name": "Cocktail Juice",
+                      "price": 99,
+                      "desc": "Orange, banana, papaya ."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425629,
+                      "name": "Nutritional Juice",
+                      "price": 110,
+                      "desc": "Beetroot, carrot, mint, orange ."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425630,
+                      "name": "Weight Loss Juice",
+                      "price": 119,
+                      "desc": "Pineapple, apple, watermelon."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425631,
+                      "name": "Cleanser Juice",
+                      "price": 119,
+                      "desc": "Spinach, beetroot, tomato."
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660425634,
+                      "name": "Rich Vitamin Juice",
+                      "price": 139,
+                      "desc": "Pineapple,apple, kiwi,orange, watermelon."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "category": {
+                "id": 10189871,
+                "name": "Regular Shakes ",
+                "items": [
+                  {
+                    "item": {
+                      "id": 660523495,
+                      "name": "Banana Caramel Shake",
+                      "price": 70,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523496,
+                      "name": "Pulpy Mango Shake",
+                      "price": 70,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523497,
+                      "name": "Cold Coffee Shake",
+                      "price": 70,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523498,
+                      "name": "Flavoury Vanilla Shake",
+                      "price": 75,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523500,
+                      "name": "Crunchy Butterscotch Shake",
+                      "price": 75,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523502,
+                      "name": "Icy Strawberry Shake",
+                      "price": 75,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523504,
+                      "name": "Mix Fruit Shake",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523506,
+                      "name": "Real Chocolate Shake",
+                      "price": 85,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523508,
+                      "name": "Cold Coffee with Ice Cream",
+                      "price": 89,
+                      "desc": ""
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660523510,
+                      "name": "Kachcha Aam Shake",
+                      "price": 89,
+                      "desc": ""
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "category": {
+                "id": 10190222,
+                "name": "Premium Shakes",
+                "items": [
+                  {
+                    "item": {
+                      "id": 660537057,
+                      "name": "Refreshing Mint Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236625,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "min": 1,
+                            "max": 1,
+                            "parent_menu_id": 6793807,
+                            "parent_visiblity": 1,
+                            "hasFocus": 0,
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537062,
+                                  "name": "300 Ml",
+                                  "price": 135,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537063,
+                                  "name": "500 Ml",
+                                  "price": 185,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537066,
+                      "name": "Sweetish Paan Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236627,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537069,
+                                  "name": "300 Ml",
+                                  "price": 139,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537072,
+                                  "name": "500 Ml",
+                                  "price": 189,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537075,
+                      "name": "Milky Coconut Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236628,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537078,
+                                  "name": "300 Ml",
+                                  "price": 139,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537080,
+                                  "name": "500 Ml",
+                                  "price": 189,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 665872315,
+                      "name": "Blueberry Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236630,
+                            "name": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 665872316,
+                                  "name": "300 Ml",
+                                  "price": 139,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 665872317,
+                                  "name": "500 Ml",
+                                  "price": 189,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537091,
+                      "name": "Pink Guava Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236632,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537094,
+                                  "name": "300 Ml",
+                                  "price": 139,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537095,
+                                  "name": "500 Ml",
+                                  "price": 189,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537098,
+                      "name": "Chocolate Oreo Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236634,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "min": 1,
+                            "max": 1,
+                            "parent_menu_id": 6793807,
+                            "parent_visiblity": 1,
+                            "hasFocus": 0,
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537102,
+                                  "name": "300 Ml",
+                                  "price": 145,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537103,
+                                  "name": "500 Ml",
+                                  "price": 195,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537106,
+                      "name": "Crunchy Kitkat Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236636,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537107,
+                                  "name": "300 Ml",
+                                  "price": 149,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537109,
+                                  "name": "500 Ml",
+                                  "price": 199,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537112,
+                      "name": "Colorful Gems Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236638,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537116,
+                                  "name": "300 Ml",
+                                  "price": 149,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537119,
+                                  "name": "500 Ml",
+                                  "price": 199,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537121,
+                      "name": "Black Grapes Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236640,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537125,
+                                  "name": "300 Ml",
+                                  "price": 149,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537127,
+                                  "name": "500 Ml",
+                                  "price": 199,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537130,
+                      "name": "Juicy Apple Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236641,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537134,
+                                  "name": "300 Ml",
+                                  "price": 160,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537136,
+                                  "name": "500 Ml",
+                                  "price": 220,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537138,
+                      "name": "Kesar Pista Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236643,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537141,
+                                  "name": "300 Ml",
+                                  "price": 160,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537142,
+                                  "name": "500 Ml",
+                                  "price": 220,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 660537144,
+                      "name": "Dry Fruit Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 99236645,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 660537148,
+                                  "name": "300 Ml",
+                                  "price": 160,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 660537150,
+                                  "name": "500 Ml",
+                                  "price": 220,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 751231175,
+                      "name": "Granola Premium Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 111538200,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "min": 1,
+                            "max": 1,
+                            "parent_menu_id": 6793807,
+                            "parent_visiblity": 1,
+                            "hasFocus": 0,
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 751231177,
+                                  "name": "300 Ml",
+                                  "price": 199,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 751231176,
+                                  "name": "500 Ml",
+                                  "price": 250,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item": {
+                      "id": 751231178,
+                      "name": "Brownie Shake",
+                      "price": 0,
+                      "desc": "",
+                      "groups": [
+                        {
+                          "group": {
+                            "id": 111538201,
+                            "name": "Quantity",
+                            "label": "Quantity",
+                            "items": [
+                              {
+                                "item": {
+                                  "id": 751231180,
+                                  "name": "300 Ml",
+                                  "price": 199,
+                                  "desc": ""
+                                }
+                              },
+                              {
+                                "item": {
+                                  "id": 751231179,
+                                  "name": "500 Ml",
+                                  "price": 250,
+                                  "desc": ""
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
