@@ -1,5 +1,5 @@
 <mat-tab-group>
-  <mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
     <ng-template mat-tab-label>
       Order
     </ng-template>
@@ -7,7 +7,7 @@
     <br />
     <br />
   </mat-tab>
-  <mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
     <ng-template mat-tab-label>
       View
     </ng-template>
@@ -15,7 +15,7 @@
     <br />
     <br />
   </mat-tab>
-  <mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
     <ng-template mat-tab-label>
       Update
     </ng-template>
@@ -23,7 +23,7 @@
     <br />
     <br />
   </mat-tab>
-  <mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_VENDORS')">
       <ng-template mat-tab-label>
         Vendors
       </ng-template>
@@ -31,7 +31,7 @@
       <br />
       <br />
     </mat-tab>
-  <mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_REPORTS')">
     <ng-template mat-tab-label>
       Expense Reports
     </ng-template>

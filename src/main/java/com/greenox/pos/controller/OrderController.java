@@ -10,9 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
-@Secured({"ROLE_ORDER_ENTRY"})
 @RestController
 @RequestMapping(value = "/api/order")
 public class OrderController {
@@ -20,6 +17,7 @@ public class OrderController {
     @Autowired
     private OrderDao orderDao;
 
+    @Secured({"ROLE_ORDER_VIEW"})
     @RequestMapping(value = "open", method = RequestMethod.GET)
     public @ResponseBody
     OrderAndSummary allOpenOrders() {
@@ -29,18 +27,14 @@ public class OrderController {
         return orderAndSummary;
     }
 
+    @Secured({"ROLE_ORDER_ENTRY"})
     @RequestMapping(value = "add", method = RequestMethod.POST)
     public Order addOrder(@RequestBody Order order) {
         LOG.info("Calling addOrder");
         return orderDao.addOrder(order);
     }
 
-    @RequestMapping(value = "get", method = RequestMethod.GET)
-    public @ResponseBody
-    List<Order> getOrder() {
-        return null;
-    }
-
+    @Secured({"ROLE_ORDER_ENTRY"})
     @RequestMapping(value = "update/{id}/status/{status}", method = RequestMethod.GET)
     public @ResponseBody
     void updateOrderStatus(@PathVariable String id, @PathVariable Constants.ORDER_STATUS status) {

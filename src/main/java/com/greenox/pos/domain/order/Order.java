@@ -11,7 +11,7 @@ import java.util.Set;
 
 import static com.greenox.pos.util.Constants.*;
 
-@Document(collection = "Order")
+@Document(collection = "order")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Order {
     @Id

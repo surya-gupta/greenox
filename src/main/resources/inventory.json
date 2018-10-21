@@ -1,147 +1,174 @@
 {
-  "inventory": {
-    "Crushes and Syrups": [
-      "Chocolate Syrup",
-      "Strawberry Syrup",
-      "Caramel Syrup",
-      "Mint Syrup",
-      "Strawberry Fillings",
-      "Black Currant",
-      "Blue Berry",
-      "Pink Guava",
-      "Paan Fillings",
-      "Kachcha Aam",
-      "Coconut Filling Bakery",
-      "Blue Curccao",
-      "Green Apple Syrup",
-      "Cranberry Syrup"
-    ],
-    "Dry Fruits": [
+  "inventory": [
+    {
+      "category": "Cleaning Content",
+      "inventoryItems": [
+        "Cloth Duster",
+        "Colin",
+        "Sponge Wipe",
+        "Dustbin Polythene",
+        "Phenyl",
+        "Poncha"
+      ]
+    },
+    {
+      "category": "Wearing",
+      "inventoryItems": [
+        "Hand Gloves",
+        "Hair Cap",
+        "Apron",
+        "Shoes",
+        "Greenox Tshirt"
+      ]
+    },
+    {
+      "category": "Others",
+      "inventoryItems": [
+        "Gems",
+        "Lentils",
+        "Olive Oil",
+        "Vinegar",
+        "Knife",
+        "Black Olives",
+        "Soya Chunks",
+        "Moong",
+        "White Salt",
+        "Yogurt/Dahi",
+        "Black Pepper",
+        "Rusk",
+        "Chopping Board",
+        "Sugar",
+        "Chaat Masala",
+        "Seasonings",
+        "Tata Elaichi Tea",
+        "Coffee Powder",
+        "Peanuts",
+        "Chocolate Oreo Buscuit",
+        "Butter",
+        "Jalepino",
+        "Peeler",
+        "Icecream Scoop",
+        "Elaichi",
+        "Wheat Pasta",
+        "Cheese Slice",
+        "Kitkat Chocolate",
+        "Lemon Juice Maker",
+        "Long",
+        "Jeera Powder",
+        "Kesar",
+        "Paneer",
+        "Fresh Cream",
+        "Black Grams",
+        "Black Salt",
+        "Gheeya Kas",
+        "Cutting Board"
+      ]
+    },
+    {
+      "category": "Dry Fruits",
+      "inventoryItems": [
+        "Chironji",
       "Dates/Khajoor",
-      "Badam",
+        "Akhrot",
       "Kaaju",
       "Kismis",
-      "Chironji",
-      "Pista",
-      "Akhrot",
-      "Makhane"
-    ],
-    "Bakery": [
-      "Jumbo Brown Bread",
-      "Wheat Burger",
-      "Multigrain Loaf"
-    ],
-    "Patty": [
-      "Herb Patty",
-      "Corn Patty",
-      "Green Pea Patty",
-      "Mushroom Patty",
-      "Soya Patty",
-      "Mint Patty",
-      "Spinach Patty"
-    ],
-    "Icecream": [
+        "Makhane",
+        "Badam",
+        "Pista"
+      ]
+    },
+    {
+      "category": "Icecream",
+      "inventoryItems": [
+        "Kesar Pista",
       "Vanilla",
-      "Chocolate",
-      "Butterscotch",
-      "Strawberry",
-      "Kesar Pista"
-    ],
-    "Sauces and Mayonnaise": [
+        "Strawberry",
+        "Butterscotch",
+        "Chocolate"
+      ]
+    },
+    {
+      "category": "Sauces and Mayonnaise",
+      "inventoryItems": [
+        "Ketchup Sachet",
       "Eggless Mayonnaise",
-      "Thousand Island",
-      "Chipotle",
-      "Cheese Dressing",
-      "Mint Mayonnaise",
-      "Honey Mustard",
+        "Chipotle",
+        "White Pasta Sauce",
+        "Garlic Sauce",
+        "Honey Mustard",
+        "Chilli Garlic Sauce",
+        "Soya Sauce",
+        "Thousand Island",
+        "Mint Mayonnaise",
       "Caesar Dressing",
-      "White Pasta Sauce",
-      "Red Pasta Sauce",
       "Barbeque Sauce",
+        "Cheese Dressing",
       "Tomato Ketchup",
-      "Ketchup Sachet",
-      "Garlic Sauce",
-      "Chilli Garlic Sauce",
-      "Soya Sauce"
-    ],
-    "Cleaning Content": [
-      "Phenyl",
-      "Colin",
-      "Poncha",
-      "Sponge Wipe",
-      "Cloth Duster",
-      "Dustbin Polythene"
-    ],
-    "Packaging": [
-      "Small Round Bowl",
-      "Delight Black Bowl",
-      "Delight Black Bowl",
+        "Red Pasta Sauce"
+      ]
+    },
+    {
+      "category": "Bakery",
+      "inventoryItems": [
+        "Jumbo Brown Bread",
+        "Multigrain Loaf",
+        "Wheat Burger"
+      ]
+    },
+    {
+      "category": "Packaging",
+      "inventoryItems": [
+        "Paper Glass 200 ml",
+        "Fork",
+        "Kulhad 150 ml",
+        "Dip Ceaser",
       "300 ml Glass",
-      "300 ml Glass Bottle",
       "500 ml Glass Bottle",
-      "Kulhad 150 ml",
-      "Paper Glass 200 ml",
+        "Sub Box",
+        "300 ml Glass Bottle",
+        "Small Round Bowl",
       "Greenox Tape",
-      "Greenox Carry Bag",
       "Burger Box",
-      "Sub Box",
+        "Silver Foil",
       "Tissue Paper",
+        "Delight Black Bowl",
       "Wrapping Paper",
       "Cling Foil",
-      "Small Round Bowl",
-      "Silver Foil",
       "Black Straw",
-      "Spoon",
-      "Fork",
-      "Dip Ceaser"
-    ],
-    "Wearing": [
-      "Apron",
-      "Hair Cap",
-      "Hand Gloves",
-      "Greenox Tshirt",
-      "Shoes"
-    ],
-    "Others": [
-      "Wheat Pasta",
-      "Paneer",
-      "Cheese Slice",
-      "Black Olives",
-      "Jalepino",
-      "Yogurt/Dahi",
-      "Fresh Cream",
-      "Black Salt",
-      "Black Pepper",
-      "White Salt",
-      "Seasonings",
-      "Olive Oil",
-      "Butter",
-      "Tata Elaichi Tea",
-      "Gems",
-      "Chocolate Oreo Buscuit",
-      "Kitkat Chocolate",
-      "Soya Chunks",
-      "Chaat Masala",
-      "Sugar",
-      "Elaichi",
-      "Long",
-      "Rusk",
-      "Coffee Powder",
-      "Jeera Powder",
-      "Vinegar",
-      "Kesar",
-      "Black Grams",
-      "Moong",
-      "Peanuts",
-      "Lentils",
-      "Icecream Scoop",
-      "Knife",
-      "Cutting Board",
-      "Peeler",
-      "Chopping Board",
-      "Gheeya Kas",
-      "Lemon Juice Maker"
-    ]
-  }
+        "Greenox Carry Bag",
+        "Spoon"
+      ]
+    },
+    {
+      "category": "Crushes and Syrups",
+      "inventoryItems": [
+        "Kachcha Aam",
+        "Paan Fillings",
+        "Strawberry Fillings",
+        "Green Apple Syrup",
+        "Strawberry Syrup",
+        "Caramel Syrup",
+        "Blue Berry",
+        "Cranberry Syrup",
+        "Mint Syrup",
+        "Coconut Filling Bakery",
+        "Pink Guava",
+        "Blue Curccao",
+        "Black Currant",
+        "Chocolate Syrup"
+      ]
+    },
+    {
+      "category": "Patty",
+      "inventoryItems": [
+        "Herb Patty",
+        "Mint Patty",
+        "Spinach Patty",
+        "Mushroom Patty",
+        "Corn Patty",
+        "Green Pea Patty",
+        "Soya Patty"
+      ]
+    }
+  ]
 }
-

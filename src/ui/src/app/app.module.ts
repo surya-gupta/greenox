@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { OrdersComponent } from './orders/orders.component';
 import { UsersComponent } from './users/users.component';
-import { DetailsComponent } from './details/details.component'; 
+import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material';
@@ -22,7 +22,6 @@ import { OrderCreateComponent } from './orders/create/create.component';
 import { OrderReportsComponent } from './orders/reports/reports.component';
 import { OrderUpdateComponent } from './orders/update/update.component';
 import { OrderViewComponent } from './orders/view/view.component';
-
 
 
 @NgModule({
@@ -50,7 +49,8 @@ import { OrderViewComponent } from './orders/view/view.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

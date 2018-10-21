@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Order } from 'src/app/shared/order';
 import { DataService } from 'src/app/data.service';
@@ -9,6 +9,7 @@ import { DataService } from 'src/app/data.service';
 })
 export class OrderOpenComponent implements OnInit {
   orders: Order[]
+  @Output() noOfOrderOpen = new EventEmitter<number>()
   interval: any
   subscription: Subscription
   summary: Map<string, number>
@@ -23,7 +24,11 @@ export class OrderOpenComponent implements OnInit {
   }
   refreshData() {
     this.subscription = this.data.getOrders().subscribe(
-      data => { this.orders = data.orders; this.summary = data.summary }
+      data => {
+        this.orders = data.orders
+        this.summary = data.summary
+        this.noOfOrderOpen.emit(data.orders.length)
+      }
     )
   }
   orderCancelled(index, orderId) {

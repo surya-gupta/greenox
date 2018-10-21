@@ -1,6 +1,6 @@
 import { Order } from "./order";
 
-export class orderAndSummary{
+export class OrderAndSummary{
     orders : Order[]
     summary: Map<string, number>
 }

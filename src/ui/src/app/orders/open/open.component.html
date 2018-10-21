@@ -1,37 +1,29 @@
-<div *ngIf="orders && orders.length>0">
+<div *ngIf="orders && orders.length>0" >
   <br />
   <mat-chip-list>
+    <mat-chip>Summary <i class="material-icons">arrow_right_alt</i></mat-chip>
     <mat-chip *ngFor="let key of objectKeys(summary)">{{key + ' : ' + summary[key]}}</mat-chip>
   </mat-chip-list>
   <br />
-  <table border="1">
-    <thead>
-      <th>#</th>
-      <th>Order No.</th>
-      <th>Source</th>
-      <th>Order Time</th>
-      <th>Prepared</th>
-      <th>Cancel</th>
-    </thead>
+  <table>
     <tbody *ngFor="let order of orders; let i=index">
       <tr>
-        <td>{{ i + 1 }}</td>
-        <td>{{ order.orderNumber }}</td>
+        <td># {{ order.orderNumber }}</td>
         <td>{{ order.source }} </td>
-        <td>{{ order.orderTime | date : "d/M h:mm a" : "IST" }}</td>
-        <td colspan="2"><i class="material-icons">timer</i> {{ timeDifference(order.orderTime) }}</td>
+        <td><button mat-button color="primary" (click)="orderCompleted(index,order.id)"><i class="material-icons">done</i></button></td>
+        <td><button mat-button color="warn" (click)="orderCancelled(index,order.id)"><i class="material-icons">cancel</i></button></td>
       </tr>
       <tr>
-        <td colspan="4">
+        <td colspan="3">
           <ol>
             <li *ngFor="let item of order.items">{{item.name}} X {{item.quantity}}</li>
           </ol>
         </td>
-        <td><button mat-button (click)="orderCompleted(index,order.id)"><i class="material-icons">done</i></button></td>
-        <td><button mat-button (click)="orderCancelled(index,order.id)"><i class="material-icons">cancel</i></button></td>
+        <td><i class="material-icons">timer</i> {{ timeDifference(order.orderTime) }}</td>
       </tr>
       <tr>
-        <td colspan="6" class="order-gap">
+        <td colspan="4" class="order-gap" class="right-allign">
+          Order Time : {{ order.orderTime | date : "dd/Mon h:mm a"}}
           <hr />
         </td>
       </tr>

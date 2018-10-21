@@ -1,8 +1,8 @@
 package com.greenox.pos.dao;
 
 import com.greenox.pos.dao.repository.OrderRepository;
-import com.greenox.pos.domain.order.Customer;
 import com.greenox.pos.domain.inventory.Item;
+import com.greenox.pos.domain.order.Customer;
 import com.greenox.pos.domain.order.Order;
 import com.greenox.pos.util.Constants;
 import com.greenox.pos.util.SendWhatsAppNotification;
@@ -66,6 +66,7 @@ public class OrderDao {
     private long orderCountOnDay() {
         return orderRepository.findByOrderTimeGreaterThanEqual(LocalDate.now().atStartOfDay());
     }
+
     private void calculateTotalAndUpdate(Order order) {
         int total = 0;
         for (Item item : order.getItems()) {

@@ -1,13 +1,13 @@
 <mat-tab-group>
   <mat-tab>
-    <ng-template mat-tab-label>
-      Open
+    <ng-template mat-tab-label *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
+      <span matBadge="{{noOfOrderOpen}}" matBadgeOverlap="false">Open</span>
     </ng-template>
-    <app-order-open></app-order-open>
+    <app-order-open (noOfOrderOpen)="updateNoOfOpenOrders($event)"></app-order-open>
     <br />
     <br />
   </mat-tab>
-  <mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
     <ng-template mat-tab-label>
       Create
     </ng-template>
@@ -15,7 +15,7 @@
     <br />
     <br />
   </mat-tab>
-  <mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
     <ng-template mat-tab-label>
       View
     </ng-template>
@@ -23,12 +23,12 @@
     <br />
     <br />
   </mat-tab>
-  <mat-tab>
-      <ng-template mat-tab-label>
-        Sales Reports
-      </ng-template>
-      <app-order-reports></app-order-reports>
-      <br />
-      <br />
-    </mat-tab>
+  <mat-tab *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
+    <ng-template mat-tab-label>
+      Sales Reports
+    </ng-template>
+    <app-order-reports></app-order-reports>
+    <br/>
+    <br/>
+  </mat-tab>
 </mat-tab-group>

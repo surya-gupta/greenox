@@ -8,7 +8,7 @@ import java.security.Principal;
 
 @Controller
 public class AuthenticationController {
-    @GetMapping("/user")
+    @GetMapping("/api/user")
     @ResponseBody
     public Principal user(Principal user) {
         return user;

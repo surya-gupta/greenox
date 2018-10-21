@@ -1,0 +1,14 @@
+form{
+    padding: 20px;
+    margin:20px;
+    font-family: 'Ubuntu Mono', monospace;
+    .form {
+        min-width: 150px;
+        max-width: 300px;
+        width: 100%;
+      }
+      
+      .full-width {
+        width: 100%;
+      }
+}

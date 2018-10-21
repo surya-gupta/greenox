@@ -7,7 +7,6 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
-import java.util.Set;
 
 @Document(collection = "vendor")
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -16,9 +15,16 @@ public class Vendor {
     private String id;
     @Indexed(unique = true)
     private String name;
-    private Set<String> phoneNumbers;
+    private Long phoneNumber;
     private String emailId;
     private Float balance;
+    private String addedBy;
+    private String updatedBy;
+    private LocalDateTime entryTime;
+    private LocalDateTime updateTime;
+    private Constants.VENDOR_STATUS status;
+    private Constants.VENDOR_TYPE type;
+    private String description;
 
     public String getId() {
         return id;
@@ -28,10 +34,37 @@ public class Vendor {
         this.id = id;
     }
 
-    private LocalDateTime entryDate;
-    private Constants.VENDOR_STATUS status;
-    private Constants.VENDOR_TYPE type;
-    private String description;
+    public String getAddedBy() {
+        return addedBy;
+    }
+
+    public void setAddedBy(String addedBy) {
+        this.addedBy = addedBy;
+    }
+
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    public LocalDateTime getEntryTime() {
+        return entryTime;
+    }
+
+    public void setEntryTime(LocalDateTime entryTime) {
+        this.entryTime = entryTime;
+    }
+
+    public LocalDateTime getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(LocalDateTime updateTime) {
+        this.updateTime = updateTime;
+    }
 
     public String getName() {
         return name;
@@ -41,12 +74,12 @@ public class Vendor {
         this.name = name;
     }
 
-    public Set<String> getPhoneNumbers() {
-        return phoneNumbers;
+    public Long getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhoneNumbers(Set<String> phoneNumbers) {
-        this.phoneNumbers = phoneNumbers;
+    public void setPhoneNumber(Long phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmailId() {
@@ -63,14 +96,6 @@ public class Vendor {
 
     public void setBalance(Float balance) {
         this.balance = balance;
-    }
-
-    public LocalDateTime getEntryDate() {
-        return entryDate;
-    }
-
-    public void setEntryDate(LocalDateTime entryDate) {
-        this.entryDate = entryDate;
     }
 
     public Constants.VENDOR_STATUS getStatus() {

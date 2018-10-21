@@ -1,3 +1,31 @@
-<p>
-  vendors works!
-</p>
+<h1>Add Vendor</h1>
+<form [formGroup]="vendor" class="form" (ngSubmit)="submitHandler()" [hidden]="success">
+ 
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput placeholder="Vendor Name" formControlName="name" required>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="type" required>
+      <mat-option  *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Phone Number</mat-label>
+    <input matInput placeholder="Phone Number" formControlName="phoneNumber" required type="number">
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Email Id</mat-label>
+    <input matInput placeholder="Email" formControlName="emailId" type="email">
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Description(Role/Duties/Tasks)</mat-label>
+    <textarea matInput placeholder="Mention some vendor duties and work tasks" formControlName="description" required></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="vendor.invalid" >Add Vendor</button>
+</form>
+
+<div *ngIf="success">
+  Yay! We received your new Vendor
+</div>

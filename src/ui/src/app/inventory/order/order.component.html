@@ -1,3 +1,69 @@
-<p>
-  order works!
-</p>
+<form [formGroup]="inventory" class="form" (ngSubmit)="submitHandler()" [hidden]="success">
+  <fieldset formGroupName="vendor">
+    <mat-form-field appearance="outline">
+      <mat-label>Vendor Name</mat-label>
+      <mat-select formControlName="id" required (selectionChange)="patchVendor($event.value)">
+        <mat-option *ngFor="let vendor of vendors; let i=index" [value]="vendor.id">{{vendor.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="Phone Number" formControlName="phoneNumber" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input matInput placeholder="Description" formControlName="description" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Email Id</mat-label>
+      <input matInput placeholder="Email Id" formControlName="emailId" readonly>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Type</mat-label>
+      <input matInput placeholder="Type" formControlName="type" readonly>
+    </mat-form-field>
+  </fieldset>
+  <button mat-raised-button color="primary" [disabled]="inventory.invalid">Create Inventory Order</button>
+  <mat-form-field appearance="outline">
+    <mat-label>Advance Amount Paid ?</mat-label>
+    <input matInput placeholder="Enter advance paid " formControlName="advanceAmount" type="number">
+  </mat-form-field>
+  <mat-tab-group formArrayName="categorisedItems">
+    <mat-tab *ngFor="let category of categorisedItemsForm.controls; let i = index;">
+      <br/>
+      <div [formGroupName]="i">
+        <ng-template mat-tab-label>
+          <input matInput formControlName="category" readonly>
+        </ng-template>
+        <div formArrayName="inventoryItems">
+          <table>
+            <tbody *ngFor="let items of categorisedItemsForm.controls[i].controls.inventoryItems.controls; let j = index;">
+              <tr [formGroupName]="j">
+                <td>
+                  <mat-form-field>
+                    <input matInput placeholder="Item" formControlName="item">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field>
+                    <input matInput placeholder="Order Quantity" formControlName="orderQuantity" type="number">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field>
+                    <input matInput placeholder="leave a note(optional)" formControlName="note">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</form>
+<div *ngIf="success">
+  <br/>
+  <span *ngIf="invNum">Yay! We received your new inventory order {{invNum}}</span>
+  <span *ngIf="invNum == undefined">Check If all details are filled. Unable to submit Inventory Order. </span>
+</div>

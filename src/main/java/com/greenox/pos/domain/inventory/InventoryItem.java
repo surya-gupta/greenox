@@ -1,14 +1,12 @@
 package com.greenox.pos.domain.inventory;
 
-import java.util.List;
-
 public class InventoryItem{
     private String item;
     private Float orderQuantity;
     private Float receivedQuantity;
     private Float costPerUnit;
     private Float netAmount;
-    private List<String> notes;
+    private String note;
 
     public Float getCostPerUnit() {
         return costPerUnit;
@@ -50,12 +48,12 @@ public class InventoryItem{
         this.receivedQuantity = receivedQuantity;
     }
 
-    public List<String> getNotes() {
-        return notes;
+    public String getNote() {
+        return note;
     }
 
-    public void setNotes(List<String> notes) {
-        this.notes = notes;
+    public void setNote(String note) {
+        this.note = note;
     }
 
     @Override

@@ -1,5 +1,9 @@
 export class User {
-    username: string;
-    password: string;
-    roles: string[];
+    name: string;
+    authenticated: boolean;
+    authorities: Authority[]
+}
+export class Authority
+{
+    authority: string
 }

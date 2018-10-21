@@ -7,26 +7,31 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Document(collection = "inventory-pos")
+@Document(collection = "inventory-order")
 public class InventoryOrder {
     @Id
     private String id;
     @DBRef
     private Vendor vendor;
-    private int number;
-    private LocalDateTime entryTime;
+    private long invNum;
+    private String note;
+    private Set<InventoryCategorised> categorisedItems;
+
     private LocalDateTime completionTime;
     private Constants.INVENTORY_STATUS status;
-    private List<String> notes;
-    private Set<InventoryCategorised> categorisedItems;
+
     private Float netAmount;
     private Float advanceAmount;
     private Float pendingAmount;
+
+    private String addedBy;
+    private String updatedBy;
+    private LocalDateTime entryTime;
+    private LocalDateTime updateTime;
+
     public String getId() {
         return id;
     }
@@ -43,12 +48,12 @@ public class InventoryOrder {
         this.vendor = vendor;
     }
 
-    public int getNumber() {
-        return number;
+    public long getInvNum() {
+        return invNum;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setInvNum(long invNum) {
+        this.invNum = invNum;
     }
 
     public LocalDateTime getEntryTime() {
@@ -75,12 +80,12 @@ public class InventoryOrder {
         this.status = status;
     }
 
-    public List<String> getNotes() {
-        return notes;
+    public String getNote() {
+        return note;
     }
 
-    public void setNotes(List<String> notes) {
-        this.notes = notes;
+    public void setNote(String note) {
+        this.note = note;
     }
 
     public Set<InventoryCategorised> getCategorisedItems() {
@@ -113,5 +118,29 @@ public class InventoryOrder {
 
     public void setPendingAmount(Float pendingAmount) {
         this.pendingAmount = pendingAmount;
+    }
+
+    public String getAddedBy() {
+        return addedBy;
+    }
+
+    public void setAddedBy(String addedBy) {
+        this.addedBy = addedBy;
+    }
+
+    public String getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+    }
+
+    public LocalDateTime getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(LocalDateTime updateTime) {
+        this.updateTime = updateTime;
     }
 }
