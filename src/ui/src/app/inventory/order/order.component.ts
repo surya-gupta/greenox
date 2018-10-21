@@ -18,6 +18,8 @@ export class InventoryOrderComponent implements OnInit {
   loading = false
   success = false
 
+  categoryBackGround= "accent"
+  
   constructor(private fb: FormBuilder, private data: DataService) { }
 
   loadInventory() {
@@ -37,13 +39,13 @@ export class InventoryOrderComponent implements OnInit {
       }
     )
   }
-
-  ngOnInit() {
-
+  loadAndSetForm() {
     this.createBaseForm()
     this.loadVendors()
     this.loadInventory()
-
+  }
+  ngOnInit() {
+    this.loadAndSetForm()
   }
 
   createBaseForm() {
@@ -73,8 +75,8 @@ export class InventoryOrderComponent implements OnInit {
     }
   }
 
-  getVendor() {
-    this.inventory.get('vendor')
+  get vendor() {
+    return this.inventory.get('vendor')
   }
 
   get categorisedItemsForm() {
@@ -117,14 +119,19 @@ export class InventoryOrderComponent implements OnInit {
     try {
       await this.data.orderInventory(formValue).subscribe(
         data => {
-          console.log(data)
-          this.invNum= data.invNum
+          this.invNum = data.invNum
         }
       )
-      this.success = true;
+      this.success = true
     } catch (err) {
       console.error(err)
     }
-    this.loading = false;
+    this.loading = false
+  }
+
+  formReset() {
+    this.inventory.reset()
+    this.loadAndSetForm()
+    this.success = false
   }
 }

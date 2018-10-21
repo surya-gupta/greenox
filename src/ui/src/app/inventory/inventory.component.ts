@@ -10,7 +10,7 @@ import { DataService } from '../data.service';
 export class InventoryComponent implements OnInit {
 
   user: User
-
+  backgroundColor: string = "primary"
   constructor(private data: DataService) { }
 
   ngOnInit() {

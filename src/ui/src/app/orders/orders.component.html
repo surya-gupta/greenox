@@ -1,4 +1,4 @@
-<mat-tab-group>
+<mat-tab-group [backgroundColor]="backgroundColor">
   <mat-tab>
     <ng-template mat-tab-label *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
       <span matBadge="{{noOfOrderOpen}}" matBadgeOverlap="false">Open</span>

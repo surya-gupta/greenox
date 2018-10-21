@@ -1,6 +1,6 @@
-<h1>Add Vendor</h1>
+
 <form [formGroup]="vendor" class="form" (ngSubmit)="submitHandler()" [hidden]="success">
- 
+  <h1>Add Vendor</h1>
   <mat-form-field class="full-width" appearance="outline">
     <mat-label>Name</mat-label>
     <input matInput placeholder="Vendor Name" formControlName="name" required>
@@ -27,5 +27,5 @@
 </form>
 
 <div *ngIf="success">
-  Yay! We received your new Vendor
+  Yay! We received your new Vendor . Want to add more vendors ? <button mat-button color="primary" (click)="formReset()"><i class="material-icons">done</i></button>
 </div>

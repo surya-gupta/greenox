@@ -11,4 +11,12 @@ form{
       .full-width {
         width: 100%;
       }
+      mat-tab-group,mat-tab,mat-form-field,button,mat-select,mat-option{
+        font-size: 18px;
+        padding: 5px;
+        font-family: 'Ubuntu Mono', monospace;
+      }
+}
+p,div,mat-select,mat-option{
+  font-family: 'Ubuntu Mono', monospace;
 }

@@ -1,4 +1,4 @@
-<mat-tab-group>
+<mat-tab-group [backgroundColor]="backgroundColor">
   <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
     <ng-template mat-tab-label>
       Order

@@ -10,6 +10,7 @@ import { User } from '../shared/user';
 export class OrdersComponent implements OnInit {
   user: User
   noOfOrderOpen: number
+  backgroundColor: string = "primary"
 
   constructor(private data: DataService) { }
 

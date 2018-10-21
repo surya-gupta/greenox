@@ -33,9 +33,9 @@ export class InventoryVendorsComponent implements OnInit {
   }
 
   async submitHandler() {
-    this.loading = true;
+    this.loading = true
 
-    const formValue = this.vendor.value;
+    const formValue = this.vendor.value
 
     try {
       await this.data.addNewVendor(formValue).subscribe(
@@ -43,10 +43,15 @@ export class InventoryVendorsComponent implements OnInit {
           console.log(data)
         }
       )
-      this.success = true;
+      this.success = true
     } catch (err) {
       console.error(err)
     }
-    this.loading = false;
+    this.loading = false
+  }
+
+  formReset(){
+    this.vendor.reset()
+    this.success = false
   }
 }
