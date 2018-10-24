@@ -9,9 +9,9 @@ import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PlaceOrderComponent } from './place-order/place-order.component';
+ 
 import { FormsModule} from '@angular/forms';
-import { OrderDetailComponent } from './order-detail/order-detail.component';
+ 
 import { MaterialModule } from './material';
 import { GetValuesPipe } from './shared/GetValuesPipe';
 import { InventoryComponent } from './inventory/inventory.component';
@@ -25,7 +25,8 @@ import { OrderCreateComponent } from './orders/create/create.component';
 import { OrderReportsComponent } from './orders/reports/reports.component';
 import { OrderUpdateComponent } from './orders/update/update.component';
 import { OrderViewComponent } from './orders/view/view.component';
-
+import { OrdermenuComponent } from './ordermenu/ordermenu.component';
+ 
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { OrderViewComponent } from './orders/view/view.component';
     OrderCreateComponent,
     OrderReportsComponent,
     OrderUpdateComponent,
-    OrderViewComponent
+    OrderViewComponent,
+    OrdermenuComponent
  
   ],
   imports: [

@@ -1,0 +1,63 @@
+ <div class="mainContent" id="main content">
+    <div *ngIf="menuList.length>0 ">
+        <div class="leftContent content">
+          <div class="leftContainer stick">
+              <div class="leftContainer_2">
+                  <div class="leftContainer_3">
+                    <div class="leftContainer_4 scrollY">
+                      <div class="category">
+                              <div>
+                                  <ng-container *ngFor="let objMenu of menuList">
+                                    <a class="categoryMenu" *ngFor="let objCategory of objMenu.items" href="#{{objCategory.id}}" (click)="catSelect(objCategory.id,$event)" > 
+                                      <div class="categoryMenuName" [class.categorySelected]="objCategory.id===currentCategory">{{objCategory.name}}</div>
+                                    </a>
+                                  </ng-container>
+                                   <div class="marker" style="transform:translateY(85px);"></div>
+                            </div>
+                      </div>
+                      <div class="vsliderGray absolutePosition">
+                        <div class="vslider" style="transform: translateY(177px); height: 126px; visibility: visible; opacity: 1;"></div></div>
+                      </div>
+                  </div>
+            </div>
+          </div>
+          <div class="rightContent"> 
+             
+             <ng-container *ngFor="let objCategory of categoryList">
+               <div id="{{objCategory.id}}" class="rightContainer">
+                  <h2 class="categoryHeader padBottom"> -   {{objCategory.name}}</h2>
+                  <div class="categoryHeaderCount">{{objCategory.item.length}} items</div>
+                  <div  class="rightContainer_1" *ngFor="let objItem of objCategory.item">
+                    
+                  <div class="rightCategoryAdd rightFloat">
+                      <div class="rightCategoryAddPlus animAddPlus">+</div>
+                      <div class="rightCategoryAddMinus animAddMinus"></div>
+                      <div class="rightCategoryAddQuant animAddQuant">{{objItem.quantity}}</div>
+                     
+                  </div>
+                  <div class="rightCategoryDesc" >
+                    
+                      <div class="rightCategoryDescName">
+                        <div class="rightCategoryDescNameDesc">{{objItem.name}}</div>
+                      </div>
+                      <div class="rightCategoryDescDesc"> desc</div>
+                      <div class="rightCategoryDescPrice">
+                          <div *ngIf="objItem.item.length>0">
+                              <div  *ngFor="let objItemItem of objItem.item">
+                                  {{objItemItem.item}} {{objItemItem.name}}  <div>{{objItemItem.price}}</div>
+                              </div>
+                          
+                          </div>
+                          <div class="rightCategoryDescPriceAmt" *ngIf="objItem.item.length==0">{{objItem.price}}</div>
+                      </div>
+                      
+                    </div>
+                  </div>
+              </div>
+            </ng-container>
+           
+          </div>
+        </div>
+      </div>  
+      
+ </div>
