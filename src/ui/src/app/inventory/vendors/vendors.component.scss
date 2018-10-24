@@ -3,18 +3,23 @@ form{
     margin:20px;
     font-family: 'Ubuntu Mono', monospace;
     .form {
-        min-width: 150px;
-        max-width: 300px;
+min-width: 300px;
+max-width: 600px;
         width: 100%;
+display: block;
       }
       
       .full-width {
         width: 100%;
-      }
+min-width: 300px;
+max-width: 600px;
+
+}
       mat-tab-group,mat-tab,mat-form-field,button,mat-select,mat-option{
         font-size: 18px;
         padding: 5px;
         font-family: 'Ubuntu Mono', monospace;
+display: block;
       }
 }
 p,div,mat-select,mat-option{

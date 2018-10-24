@@ -29,11 +29,10 @@ form{
         width: 100%;
       }
       button{
-          padding: 15px;
-          margin: 10px;
-          position: absolute;
-          right: 0;
+padding: 5px 10px 5px 10px;
+margin: 5px;
           font-family: 'Ubuntu Mono', monospace;
+font-size: 18px;
       }
 
       mat-tab-group,mat-tab,mat-form-field{
@@ -44,8 +43,9 @@ form{
         max-width: 800px;
         height: 100%;
     }
+.hidden {display:none;}
 }
-p,div,mat-select,mat-option{
+p,div,mat-select,mat-option,h1{
     font-family: 'Ubuntu Mono', monospace;
 }
 

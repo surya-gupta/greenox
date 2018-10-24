@@ -43,9 +43,11 @@ public class OrderDao {
         return orderRepository.findAllOpenOrder(new Sort(Sort.Direction.ASC, "orderTime"));
     }
 
-    public void updateOrderStatus(String id, Constants.ORDER_STATUS status) {
+    public void updateOrderStatus(String id, Constants.ORDER_STATUS status, String note) {
         Order order = orderRepository.findById(id).get();
         order.setStatus(status);
+        String orderNote = order.getNote() == null ? "" : order.getNote();
+        if (note != null && !note.trim().isEmpty()) order.setNote(orderNote + "- " + note);
         order.setServer(SecurityContextHolder.getContext().getAuthentication().getName());
         order.setServeTime(LocalDateTime.now());
         final Order save = orderRepository.save(order);

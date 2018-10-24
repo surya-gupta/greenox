@@ -10,6 +10,7 @@ export class InventoryOrder{
     completionTime: Date
     status: string
 
+    paymentMode: string
     // Calculation Fields
     netAmount: number
     advanceAmount: number

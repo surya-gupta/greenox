@@ -35,10 +35,10 @@ public class OrderController {
     }
 
     @Secured({"ROLE_ORDER_ENTRY"})
-    @RequestMapping(value = "update/{id}/status/{status}", method = RequestMethod.GET)
+    @RequestMapping(value = "update/{id}/status/{status}/note/{note}", method = RequestMethod.GET)
     public @ResponseBody
-    void updateOrderStatus(@PathVariable String id, @PathVariable Constants.ORDER_STATUS status) {
+    void updateOrderStatus(@PathVariable String id, @PathVariable Constants.ORDER_STATUS status, @PathVariable String note) {
         LOG.info("Calling updateOrderStatus");
-        orderDao.updateOrderStatus(id, status);
+        orderDao.updateOrderStatus(id, status, note);
     }
 }

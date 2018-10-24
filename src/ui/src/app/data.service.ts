@@ -45,14 +45,14 @@ export class DataService {
     return this.http.get<Vendor[]>(url)
   }
 
-  orderCancelled(orderId) {
-    var url = `${this.baseURL}/order/update/${orderId}/status/CANCELLED`
+  orderCancelled(orderId,note) {
+    var url = `${this.baseURL}/order/update/${orderId}/status/CANCELLED/note/${note}`
     return this.http.get(url)
 
   }
 
-  orderCompleted(orderId) {
-    var url = `${this.baseURL}/order/update/${orderId}/status/COMPLETED`
+  orderCompleted(orderId,note) {
+    var url = `${this.baseURL}/order/update/${orderId}/status/COMPLETED/note/${note}`
     return this.http.get(url)
   }
 

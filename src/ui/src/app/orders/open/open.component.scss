@@ -8,7 +8,9 @@ table{
     .order-gap{
       padding: 0px;
     }
-  
+.late{
+animation:blinkingText 1s infinite;
+}
     tr:nth-child(even){
       text-align: right;
     }
@@ -43,4 +45,15 @@ mat-chip{
     border-radius: 8px 4px 8px 4px;
     padding: 5px;
     font-size: 20px;
+}
+h1{
+font-family: 'Ubuntu Mono', monospace;
+padding: 5px;
+}
+@keyframes blinkingText{
+0%{     color: red;    }
+49%{    color: pink; }
+50%{    color: maroon; }
+60%{    color:red;  }
+100%{   color: black;    }
 }

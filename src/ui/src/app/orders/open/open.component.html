@@ -1,4 +1,4 @@
-<div *ngIf="orders && orders.length>0" >
+<div *ngIf="orders && orders.length>0">
   <br />
   <mat-chip-list>
     <mat-chip>Summary <i class="material-icons">arrow_right_alt</i></mat-chip>
@@ -6,7 +6,7 @@
   </mat-chip-list>
   <br />
   <table>
-    <tbody *ngFor="let order of orders; let i=index">
+    <tbody *ngFor="let order of orders; let i=index" [className]="orderTimerNotification(order.orderTime)">
       <tr>
         <td># {{ order.orderNumber }}</td>
         <td>{{ order.source }} </td>
@@ -23,7 +23,7 @@
       </tr>
       <tr>
         <td colspan="4" class="order-gap" class="right-allign">
-          Order Time : {{ order.orderTime | date : "dd/Mon h:mm a"}}
+          Order Time : {{ order.orderTime | date : "EEE dd/MMM h:mm a"}}
           <hr />
         </td>
       </tr>

@@ -23,14 +23,25 @@ public class InventoryOrder {
     private LocalDateTime completionTime;
     private Constants.INVENTORY_STATUS status;
 
-    private Float netAmount;
+
     private Float advanceAmount;
+    private Float netAmount;
     private Float pendingAmount;
+    private Constants.PAYMENT_MODE paymentMode;
+
 
     private String addedBy;
     private String updatedBy;
     private LocalDateTime entryTime;
     private LocalDateTime updateTime;
+
+    public Constants.PAYMENT_MODE getPaymentMode() {
+        return paymentMode;
+    }
+
+    public void setPaymentMode(Constants.PAYMENT_MODE paymentMode) {
+        this.paymentMode = paymentMode;
+    }
 
     public String getId() {
         return id;

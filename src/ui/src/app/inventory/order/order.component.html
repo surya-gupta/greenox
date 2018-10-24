@@ -1,33 +1,72 @@
 <form [formGroup]="inventory" class="form" (ngSubmit)="submitHandler()" [hidden]="success">
   <fieldset formGroupName="vendor">
-    <mat-form-field >
-      <mat-label>Vendor Name</mat-label>
-      <mat-select formControlName="id" required (selectionChange)="patchVendor($event.value)">
-        <mat-option *ngFor="let vendor of vendors; let i=index" [value]="vendor.id">{{vendor.name}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field >
-      <mat-label>Phone Number</mat-label>
-      <input matInput placeholder="Phone Number" formControlName="phoneNumber" readonly>
-    </mat-form-field>
-    <mat-form-field >
-      <mat-label>Description</mat-label>
-      <input matInput placeholder="Description" formControlName="description" readonly>
-    </mat-form-field>
-    <mat-form-field >
-      <mat-label>Email Id</mat-label>
-      <input matInput placeholder="Email Id" formControlName="emailId" readonly>
-    </mat-form-field>
-    <mat-form-field >
-      <mat-label>Type</mat-label>
-      <input matInput placeholder="Type" formControlName="type" readonly>
-    </mat-form-field>
+    <table>
+      <tr>
+        <td>
+          <mat-form-field>
+            <mat-label>Vendor Name</mat-label>
+            <mat-select formControlName="id" required (selectionChange)="patchVendor($event.value)">
+              <mat-option *ngFor="let vendor of vendors; let i=index" [value]="vendor.id">{{vendor.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput placeholder="Description" formControlName="description">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <mat-label>Email Id</mat-label>
+            <input matInput placeholder="Email Id" formControlName="emailId">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field>
+            <mat-label>Type</mat-label>
+            <input matInput placeholder="Type" formControlName="type">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
   </fieldset>
-  <button mat-raised-button color="primary" [disabled]="inventory.invalid">Create Inventory Order</button>
-  <mat-form-field>
-    <mat-label>Advance Amount Paid ?</mat-label>
-    <input autocomplete="off" matInput placeholder="Enter advance paid " formControlName="advanceAmount" type="number" min="0">
-  </mat-form-field>
+
+  <table>
+    <tr>
+      <td>
+        <mat-form-field>
+          <mat-label>Advance Amount Paid ?</mat-label>
+          <input autocomplete="off" matInput placeholder="Enter advance paid " formControlName="advanceAmount"
+                 type="number"
+                 min="0" (change)="enablePaymentMode()">
+        </mat-form-field>
+      </td>
+      <td [ngClass]="{'hidden': inventory.controls.paymentMode.disabled}">
+        <mat-form-field>
+          <mat-label>Paid via</mat-label>
+          <mat-select formControlName="paymentMode" required>
+            <mat-option *ngFor="let payment of paymentModes" [value]="payment">{{payment}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+      <td>
+        <button mat-raised-button color="primary" [disabled]="inventory.invalid">Create Inventory Order</button>
+      </td>
+      <td>
+        <button mat-raised-button color="warn" (click)="formReset();$event.preventDefault()">Reset</button>
+      </td>
+    </tr>
+  </table>
+
+
   <mat-tab-group formArrayName="categorisedItems" [backgroundColor]="categoryBackGround">
     <mat-tab *ngFor="let category of categorisedItemsForm.controls; let i = index;">
       <br/>
@@ -41,7 +80,7 @@
               <tr [formGroupName]="j">
                 <td>
                   <mat-form-field>
-                    <input matInput placeholder="Item" formControlName="item">
+                    <input matInput placeholder="Item" formControlName="item" required>
                   </mat-form-field>
                 </td>
                 <td>
@@ -58,12 +97,19 @@
             </tbody>
           </table>
         </div>
+        <div>
+          <button mat-button (click)="addMoreItemToCategory(i); $event.preventDefault()">Could'nt Find Item? Add Item
+            !
+          </button>
+        </div>
       </div>
     </mat-tab>
   </mat-tab-group>
 </form>
 <div *ngIf="success">
   <br/>
-  <span *ngIf="invNum">Yay! We received your new inventory order {{invNum}} . Wnat to order order more inventory ? <button mat-button color="primary" (click)="formReset()"><i class="material-icons">done</i></button></span>
-  <span *ngIf="invNum == undefined">Check If all details are filled. Unable to submit Inventory Order. Try Again ? <button mat-button color="primary" (click)="formReset()"><i class="material-icons">done</i></button> </span>
+  <span *ngIf="invNum">Yay! We received your new inventory order {{invNum}} . Wnat to order order more inventory ?
+    <button mat-button color="primary" (click)="formReset()"><i class="material-icons">done</i></button></span>
+  <span *ngIf="invNum == undefined">Check If all details are filled. Unable to submit Inventory Order. Try Again ?
+    <button mat-button color="primary" (click)="formReset()"><i class="material-icons">done</i></button> </span>
 </div>

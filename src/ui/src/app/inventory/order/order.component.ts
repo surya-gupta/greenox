@@ -13,13 +13,14 @@ export class InventoryOrderComponent implements OnInit {
 
   categorizedInventory: CategorizedInventory[]
   vendors: Vendor[]
+  paymentModes: any = ["Cash", "Paytm", "PhonePe", "GPay", "Mobikwik", "FreeCharge"]
   invNum: number
   inventory: FormGroup
   loading = false
   success = false
 
-  categoryBackGround= "accent"
-  
+  categoryBackGround = "warn"
+
   constructor(private fb: FormBuilder, private data: DataService) { }
 
   loadInventory() {
@@ -34,7 +35,6 @@ export class InventoryOrderComponent implements OnInit {
   loadVendors() {
     this.data.getAllVendor().subscribe(
       data => {
-        //console.log("getting all vendors --> " + data.length)
         this.vendors = data
       }
     )
@@ -52,24 +52,23 @@ export class InventoryOrderComponent implements OnInit {
     this.inventory = this.fb.group({
       vendor: this.fb.group({
         id: [null],
-        name: [null],
-        phoneNumber: [null],
-        description: [null],
-        emailId: [null],
-        type: [null]
+        name:new FormControl({ value: null, disabled: true }),
+        phoneNumber: new FormControl({ value: null, disabled: true }),
+        description: new FormControl({ value: null, disabled: true }),
+        emailId: new FormControl({ value: null, disabled: true }),
+        type: new FormControl({ value: null, disabled: true })
       }),
       invNum: [null],
       note: [null],
       advanceAmount: [null],
+      paymentMode: new FormControl({ value: null, disabled: true }),
       categorisedItems: this.fb.array([])
     })
   }
 
   createCategorizedForm() {
     if (this.categorizedInventory) {
-      //console.log("getting all inventory  --> " + this.categorizedInventory.length)
       this.categorizedInventory.forEach(data => {
-        //console.log(`Create form for ${JSON.stringify(data)}`)
         this.addCategorizedItems(data)
       })
     }
@@ -89,7 +88,7 @@ export class InventoryOrderComponent implements OnInit {
       category: [category.category],
       inventoryItems: this.fb.array([])
     })
-    var categorisedItemsForm = categoryForm.get('inventoryItems') as FormArray
+    var itemsForm = categoryForm.get('inventoryItems') as FormArray
     category.inventoryItems.forEach(data => {
       var itemForm = this.fb.group({
         item: [data],
@@ -99,22 +98,20 @@ export class InventoryOrderComponent implements OnInit {
         netAmount: [0],
         note: [null]
       })
-      categorisedItemsForm.push(itemForm)
+      itemsForm.push(itemForm)
     })
     this.categorisedItemsForm.push(categoryForm)
   }
 
   patchVendor(id) {
-    console.log("Vendor selected: " + id)
     var foundVal = this.vendors.find(data => data.id == id)
-    console.log("Vendor selected: " + JSON.stringify(foundVal))
     this.inventory.get('vendor').patchValue(foundVal)
   }
 
   async submitHandler() {
     this.loading = true;
 
-    const formValue = this.inventory.value;
+    const formValue = this.inventory.value
 
     try {
       await this.data.orderInventory(formValue).subscribe(
@@ -133,5 +130,31 @@ export class InventoryOrderComponent implements OnInit {
     this.inventory.reset()
     this.loadAndSetForm()
     this.success = false
+  }
+
+  addMoreItemToCategory(i) {
+
+    var categoryForm = this.categorisedItemsForm.at(i)
+    var itemsForm = categoryForm.get('inventoryItems') as FormArray
+    var itemForm = this.fb.group({
+      item: [null],
+      orderQuantity: [0],
+      receivedQuantity: [0],
+      costPerUnit: [0],
+      netAmount: [0],
+      note: [null]
+    })
+    itemsForm.push(itemForm)
+  }
+
+  enablePaymentMode() {
+    var advanceAmount = this.inventory.get('advanceAmount').value
+    console.log("Advance amount " + advanceAmount)
+    if (advanceAmount == undefined || advanceAmount == 0) {
+      this.inventory.get("paymentMode").setValue(null)
+      this.inventory.get("paymentMode").disable()
+    } else {
+      this.inventory.get("paymentMode").enable()
+    }
   }
 }

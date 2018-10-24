@@ -22,7 +22,7 @@ import { OrderCreateComponent } from './orders/create/create.component';
 import { OrderReportsComponent } from './orders/reports/reports.component';
 import { OrderUpdateComponent } from './orders/update/update.component';
 import { OrderViewComponent } from './orders/view/view.component';
-
+import { DailogComponent } from './shared/dailog/dailog.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import { OrderViewComponent } from './orders/view/view.component';
     OrderCreateComponent,
     OrderReportsComponent,
     OrderUpdateComponent,
-    OrderViewComponent
+    OrderViewComponent,
+    DailogComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +54,7 @@ import { OrderViewComponent } from './orders/view/view.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DailogComponent]
 })
 export class AppModule { }
