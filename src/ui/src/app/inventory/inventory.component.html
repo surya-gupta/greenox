@@ -1,4 +1,4 @@
-<mat-tab-group [backgroundColor]="backgroundColor">
+<mat-tab-group [backgroundColor]="backgroundColor" dynamicHeight mat-stretch-tabs>
   <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
     <ng-template mat-tab-label>
       Order
@@ -12,14 +12,6 @@
       View
     </ng-template>
     <app-inventory-view></app-inventory-view>
-    <br />
-    <br />
-  </mat-tab>
-  <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
-    <ng-template mat-tab-label>
-      Update
-    </ng-template>
-    <app-inventory-update></app-inventory-update>
     <br />
     <br />
   </mat-tab>

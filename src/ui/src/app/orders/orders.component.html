@@ -1,4 +1,4 @@
-<mat-tab-group [backgroundColor]="backgroundColor">
+<mat-tab-group [backgroundColor]="backgroundColor" dynamicHeight mat-stretch-tabs>
   <mat-tab>
     <ng-template mat-tab-label *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
       <span matBadge="{{noOfOrderOpen}}" matBadgeOverlap="false" matBadgeColor="warn">Open</span>

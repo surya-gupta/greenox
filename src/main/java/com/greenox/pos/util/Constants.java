@@ -9,7 +9,7 @@ public class Constants {
 
     public enum INVENTORY_STATUS {NEW, CANCELLED, INCOMPLETE, COMPLETED}
 
-    public enum VENDOR_STATUS {NEW, DECOMMISSIONED}
+    public enum VENDOR_STATUS {Current, Discontinued}
 
     public enum VENDOR_TYPE {Service, Shop, Distributor}
 }

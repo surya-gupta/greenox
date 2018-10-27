@@ -8,6 +8,7 @@ import com.greenox.pos.domain.inventory.Inventory;
 import com.greenox.pos.domain.inventory.InventoryItem;
 import com.greenox.pos.domain.inventory.InventoryOrder;
 import com.greenox.pos.domain.inventory.Vendor;
+import com.greenox.pos.util.Constants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -60,6 +61,15 @@ public class InventoryDao implements InitializingBean {
     }
 
     public Vendor createOrUpdateVendor(Vendor vendor) {
+        if (vendor.getId() == null) {
+            vendor.setBalance(0F);
+            vendor.setAddedBy(SecurityContextHolder.getContext().getAuthentication().getName());
+            vendor.setEntryTime(LocalDateTime.now());
+            vendor.setStatus(Constants.VENDOR_STATUS.Current);
+        } else {
+            vendor.setUpdatedBy(SecurityContextHolder.getContext().getAuthentication().getName());
+            vendor.setUpdateTime(LocalDateTime.now());
+        }
        vendor=vendorRepository.save(vendor);
        LOG.info("Vendor updated/saved {}",vendor.getName());
        return vendor;

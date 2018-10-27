@@ -1,27 +1,16 @@
-form{
-    padding: 20px;
-    margin:20px;
-    font-family: 'Ubuntu Mono', monospace;
-    .form {
-min-width: 300px;
-max-width: 600px;
-        width: 100%;
-display: block;
-      }
-      
-      .full-width {
-        width: 100%;
-min-width: 300px;
-max-width: 600px;
+table {
+width: 100%;
+td,th{
+margin: 5px;
+font-family: 'Ubuntu Mono', monospace;
+}
 
 }
-      mat-tab-group,mat-tab,mat-form-field,button,mat-select,mat-option{
-        font-size: 18px;
-        padding: 5px;
-        font-family: 'Ubuntu Mono', monospace;
-display: block;
-      }
+mat-paginator,input,mat-form-field{
+font-family: 'Ubuntu Mono', monospace;
 }
-p,div,mat-select,mat-option{
-  font-family: 'Ubuntu Mono', monospace;
+.filter-input {
+font-size: 14px;
+width: 100%;
+font-family: 'Ubuntu Mono', monospace;
 }

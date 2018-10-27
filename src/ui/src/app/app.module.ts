@@ -23,6 +23,7 @@ import { OrderReportsComponent } from './orders/reports/reports.component';
 import { OrderUpdateComponent } from './orders/update/update.component';
 import { OrderViewComponent } from './orders/view/view.component';
 import { DailogComponent } from './shared/dailog/dailog.component';
+import { VendorFormComponent } from './inventory/vendors/vendor-form/vendor-form.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DailogComponent } from './shared/dailog/dailog.component';
     OrderReportsComponent,
     OrderUpdateComponent,
     OrderViewComponent,
-    DailogComponent
+    DailogComponent,
+    VendorFormComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,6 @@ import { DailogComponent } from './shared/dailog/dailog.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DailogComponent]
+  entryComponents: [DailogComponent,VendorFormComponent]
 })
 export class AppModule { }

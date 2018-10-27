@@ -67,7 +67,7 @@
   </table>
 
 
-  <mat-tab-group formArrayName="categorisedItems" [backgroundColor]="categoryBackGround">
+  <mat-tab-group formArrayName="categorisedItems" [backgroundColor]="categoryBackGround" mat-stretch-tabs dynamicHeight>
     <mat-tab *ngFor="let category of categorisedItemsForm.controls; let i = index;">
       <br/>
       <div [formGroupName]="i">

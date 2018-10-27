@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { DataService } from 'src/app/data.service';
-import { Item } from 'src/app/shared/item';
-
+import { Vendor } from 'src/app/shared/vendor';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatDialog, MatSnackBar } from '@angular/material';
+import { VendorFormComponent } from './vendor-form/vendor-form.component';
 @Component({
   selector: 'app-inventory-vendors',
   templateUrl: './vendors.component.html',
@@ -10,48 +11,53 @@ import { Item } from 'src/app/shared/item';
 })
 export class InventoryVendorsComponent implements OnInit {
 
-  vendor: FormGroup
-  loading = false;
-  success = false;
-
-
-  cart: Item[]
-  types: any = ['Service', 'Shop', 'Distribution']
-
-  constructor(private fb: FormBuilder, private data: DataService) {
-
-  }
+  currentVendor: Vendor
+  text: string
+  vendors: Vendor[]
+  dataSource = new MatTableDataSource(this.vendors);
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  pageSizeOptions: number[] = [5, 10, 25, 50];
+  displayedColumns: string[] = ['name', 'phoneNumber', 'emailId', 'status', 'type', 'description', 'id'];
+  constructor(private data: DataService, public dialog: MatDialog, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.vendor = this.fb.group({
-      name: [null, [Validators.required]],
-      phoneNumber: [null, [Validators.required, Validators.minLength(10)]],
-      description: [null, [Validators.required]],
-      emailId: [null, [Validators.email]],
-      type: [null, [Validators.required]]
-    })
+    this.loadVendors()
   }
 
-  async submitHandler() {
-    this.loading = true
+  loadVendors() {
+    this.data.getAllVendor().subscribe(
+      data => {
+        this.vendors = data
+        this.dataSource = new MatTableDataSource(data)
+        this.dataSource.paginator = this.paginator
+      }
+    )
+  }
 
-    const formValue = this.vendor.value
+  patchVendor(vendor) {
 
-    try {
-      await this.data.addNewVendor(formValue).subscribe(
-        data => {
-          console.log(data)
-        }
-      )
-      this.success = true
-    } catch (err) {
-      console.error(err)
+    if (vendor) {
+      vendor = this.vendors.find(data => data.id == vendor)
     }
-    this.loading = false
+    else {
+      vendor = new Vendor()
+    }
+    const dialogRef = this.dialog.open(VendorFormComponent, {
+      width: '600px',
+      data: vendor
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result && result == 'true') {
+        this.loadVendors();
+      }
+    })
+    this.currentVendor = vendor
   }
 
-  formReset(){
-    this.vendor.reset()
-    this.success = false
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 }

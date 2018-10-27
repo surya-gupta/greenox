@@ -1,7 +1,7 @@
 export class Vendor {
     id: string
     name: String
-    phoneNumbers: string[]
+    phoneNumber: number
     emailId: string
     balance: number
     addedBy: string

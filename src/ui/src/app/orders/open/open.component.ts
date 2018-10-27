@@ -4,6 +4,7 @@ import { Order } from 'src/app/shared/order';
 import { DataService } from 'src/app/data.service';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { DailogComponent } from 'src/app/shared/dailog/dailog.component';
+import { containsElement } from '@angular/animations/browser/src/render/shared';
 @Component({
   selector: 'app-order-open',
   templateUrl: './open.component.html',
@@ -39,6 +40,7 @@ export class OrderOpenComponent implements OnInit {
       data: { task: 'Order', action: 'Cancel', reason: '' }
     });
     dialogRef.afterClosed().subscribe(result => {
+      console.log("closing cancellation dailog ....")
       if (result != undefined) {
         this.data.orderCancelled(orderId, result).subscribe(
           data => {
@@ -48,6 +50,7 @@ export class OrderOpenComponent implements OnInit {
             this.orders.splice(index, 1)
           })
       }
+      console.log("closed cancellation dailog ....")
     })
   }
 

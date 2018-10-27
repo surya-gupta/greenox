@@ -8,13 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -39,20 +37,9 @@ public class InventoryController {
     }
 
     @Secured({"ROLE_INVENTORY_VENDORS"})
-    @RequestMapping(value = "vendor/create", method = RequestMethod.POST)
-    public Vendor createVendor(@RequestBody Vendor vendor) throws Exception {
-        LOG.info("Calling addVendor");
-        vendor.setAddedBy(SecurityContextHolder.getContext().getAuthentication().getName());
-        vendor.setEntryTime(LocalDateTime.now());
-        return inventoryDao.createOrUpdateVendor(vendor);
-    }
-
-    @Secured({"ROLE_INVENTORY_VENDORS"})
     @RequestMapping(value = "vendor/update", method = RequestMethod.POST)
     public Vendor addOrUpdateVendor(@RequestBody Vendor vendor) throws Exception {
         LOG.info("Calling updateVendor");
-        vendor.setUpdatedBy(SecurityContextHolder.getContext().getAuthentication().getName());
-        vendor.setUpdateTime(LocalDateTime.now());
         return inventoryDao.createOrUpdateVendor(vendor);
     }
 

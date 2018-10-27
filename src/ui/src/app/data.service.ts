@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { OrderAndSummary } from './shared/order-and-summary';
 import { User } from './shared/user';
-import { CategorizedInventory } from './shared/categorizedInventory';
 import { Vendor } from './shared/vendor';
 import { InventoryOrder } from './shared/inventory-order';
 @Injectable({
@@ -30,8 +29,8 @@ export class DataService {
     return this.http.get<any>(url)
   }
 
-  addNewVendor(vendor) {
-    var url = `${this.baseURL}/inventory/vendor/create`
+  updateVendor(vendor) {
+    var url = `${this.baseURL}/inventory/vendor/update`
     return this.http.post(url, vendor)
   }
 
