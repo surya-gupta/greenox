@@ -1,15 +1,19 @@
 package com.greenox.pos.util;
 
-public class Constants {
-    public enum ORDER_SOURCE {Kiosk, Zomato, Swiggy, FoodPanda}
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-    public enum PAYMENT_MODE {Cash, Paytm, PhonePe, GPay, Mobikwik, FreeCharge}
+public interface Constants {
+    enum ORDER_SOURCE {Kiosk, Zomato, Swiggy, FoodPanda}
 
-    public enum ORDER_STATUS {NEW, CANCELLED, REJECTED, MODIFIED , COMPLETED}
+    enum PAYMENT_MODE {Cash, Paytm, PhonePe, GPay, Mobikwik, FreeCharge}
 
-    public enum INVENTORY_STATUS {NEW, CANCELLED, INCOMPLETE, COMPLETED}
+    enum ORDER_STATUS {NEW, CANCELLED, REJECTED, MODIFIED, COMPLETED}
 
-    public enum VENDOR_STATUS {Current, Discontinued}
+    enum INVENTORY_STATUS {NEW, CANCELLED, INCOMPLETE, COMPLETED}
 
-    public enum VENDOR_TYPE {Service, Shop, Distributor}
+    enum VENDOR_STATUS {Current, Discontinued}
+
+    enum VENDOR_TYPE {Service, Shop, Distributor}
+
+    ObjectMapper mapper = new ObjectMapper();
 }

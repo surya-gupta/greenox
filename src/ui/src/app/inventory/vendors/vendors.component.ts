@@ -43,12 +43,15 @@ export class InventoryVendorsComponent implements OnInit {
       vendor = new Vendor()
     }
     const dialogRef = this.dialog.open(VendorFormComponent, {
-      width: '600px',
+      width: '1000px',
       data: vendor
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result && result == 'true') {
         this.loadVendors();
+        this.snackBar.open(`Vendor Updated`, 'OK', {
+          duration: 2000,
+        })
       }
     })
     this.currentVendor = vendor

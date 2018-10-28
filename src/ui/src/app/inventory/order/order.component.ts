@@ -19,7 +19,7 @@ export class InventoryOrderComponent implements OnInit {
   loading = false
   success = false
 
-  categoryBackGround = "warn"
+  categoryBackGround = "accent"
 
   constructor(private fb: FormBuilder, private data: DataService) { }
 
@@ -149,7 +149,6 @@ export class InventoryOrderComponent implements OnInit {
 
   enablePaymentMode() {
     var advanceAmount = this.inventory.get('advanceAmount').value
-    console.log("Advance amount " + advanceAmount)
     if (advanceAmount == undefined || advanceAmount == 0) {
       this.inventory.get("paymentMode").setValue(null)
       this.inventory.get("paymentMode").disable()

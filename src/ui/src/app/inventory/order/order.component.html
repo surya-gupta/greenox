@@ -44,9 +44,8 @@
       <td>
         <mat-form-field>
           <mat-label>Advance Amount Paid ?</mat-label>
-          <input autocomplete="off" matInput placeholder="Enter advance paid " formControlName="advanceAmount"
-                 type="number"
-                 min="0" (change)="enablePaymentMode()">
+          <input autocomplete="off" matInput placeholder="Enter advance paid " formControlName="advanceAmount" type="number"
+            min="0" (change)="enablePaymentMode()">
         </mat-form-field>
       </td>
       <td [ngClass]="{'hidden': inventory.controls.paymentMode.disabled}">
@@ -69,10 +68,10 @@
 
   <mat-tab-group formArrayName="categorisedItems" [backgroundColor]="categoryBackGround" mat-stretch-tabs dynamicHeight>
     <mat-tab *ngFor="let category of categorisedItemsForm.controls; let i = index;">
-      <br/>
+      <br />
       <div [formGroupName]="i">
         <ng-template mat-tab-label>
-          <input matInput formControlName="category" readonly>
+          <input matInput formControlName="category" readonly matTooltip="{{category.get('category').value}}">
         </ng-template>
         <div formArrayName="inventoryItems">
           <table>
@@ -98,18 +97,16 @@
           </table>
         </div>
         <div>
-          <button mat-button (click)="addMoreItemToCategory(i); $event.preventDefault()">Could'nt Find Item? Add Item
-            !
-          </button>
+          <button mat-button (click)="addMoreItemToCategory(i); $event.preventDefault()">Could'nt Find Item? Add Item !</button>
         </div>
       </div>
     </mat-tab>
   </mat-tab-group>
 </form>
 <div *ngIf="success">
-  <br/>
+  <br />
   <span *ngIf="invNum">Yay! We received your new inventory order {{invNum}} . Wnat to order order more inventory ?
-    <button mat-button color="primary" (click)="formReset()"><i class="material-icons">done</i></button></span>
+    <button mat-button (click)="formReset()"><i class="material-icons">done</i></button></span>
   <span *ngIf="invNum == undefined">Check If all details are filled. Unable to submit Inventory Order. Try Again ?
-    <button mat-button color="primary" (click)="formReset()"><i class="material-icons">done</i></button> </span>
+    <button mat-button (click)="formReset()"><i class="material-icons">done</i></button> </span>
 </div>

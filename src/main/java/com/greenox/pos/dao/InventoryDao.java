@@ -9,10 +9,18 @@ import com.greenox.pos.domain.inventory.InventoryItem;
 import com.greenox.pos.domain.inventory.InventoryOrder;
 import com.greenox.pos.domain.inventory.Vendor;
 import com.greenox.pos.util.Constants;
+import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.aggregation.MatchOperation;
+import org.springframework.data.mongodb.core.aggregation.SortOperation;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
@@ -21,10 +29,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.sort;
 
 @Component
 public class InventoryDao implements InitializingBean {
@@ -35,6 +46,8 @@ public class InventoryDao implements InitializingBean {
     private InventoryOrderRepository inventoryOrderRepository;
     @Autowired
     private VendorRepository vendorRepository;
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
     private void loadInventory() {
         StringBuilder text = new StringBuilder();
@@ -89,6 +102,21 @@ public class InventoryDao implements InitializingBean {
     public List<Vendor> getVendors() {
         LOG.info("get all vendors");
         return vendorRepository.findAll();
+    }
+
+    public List<InventoryOrder> searchInventory(HashMap<String, Object> searchCriteria) {
+        Criteria criteria = new Criteria();
+        if (searchCriteria.containsKey("vendor")) {
+            criteria.and("vendor.$id").is(new ObjectId(String.valueOf(searchCriteria.get("vendor"))));
+        }
+        if (searchCriteria.containsKey("invNum")) {
+            criteria.and("invNum").is(searchCriteria.get("invNum"));
+        }
+        MatchOperation matchStage = Aggregation.match(criteria);
+        SortOperation sortByEntryTimeDesc = sort(new Sort(Sort.Direction.DESC, "entryTime"));
+        Aggregation aggregation = Aggregation.newAggregation(matchStage,sortByEntryTimeDesc);
+        AggregationResults<InventoryOrder> output= mongoTemplate.aggregate(aggregation, "inventory-order", InventoryOrder.class);
+        return output.getMappedResults();
     }
 
     @Override

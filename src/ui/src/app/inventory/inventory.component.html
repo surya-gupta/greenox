@@ -1,7 +1,7 @@
 <mat-tab-group [backgroundColor]="backgroundColor" dynamicHeight mat-stretch-tabs>
   <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
     <ng-template mat-tab-label>
-      Order
+      <span class="mat-tab-label">Order</span>
     </ng-template>
     <app-inventory-order></app-inventory-order>
     <br />
@@ -9,7 +9,7 @@
   </mat-tab>
   <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_ENTRY')">
     <ng-template mat-tab-label>
-      View
+      <span class="mat-tab-label">View</span>
     </ng-template>
     <app-inventory-view></app-inventory-view>
     <br />
@@ -17,7 +17,7 @@
   </mat-tab>
   <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_VENDORS')">
       <ng-template mat-tab-label>
-        Vendors
+        <span class="mat-tab-label">Vendors</span>
       </ng-template>
       <app-inventory-vendors></app-inventory-vendors>
       <br />
@@ -25,7 +25,7 @@
     </mat-tab>
   <mat-tab *ngIf="containsAuthority('ROLE_INVENTORY_REPORTS')">
     <ng-template mat-tab-label>
-      Expense Reports
+      <span class="mat-tab-label">Expense Reports</span>
     </ng-template>
     <app-inventory-reports></app-inventory-reports>
     <br />

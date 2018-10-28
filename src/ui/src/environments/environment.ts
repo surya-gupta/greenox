@@ -14,7 +14,6 @@ export const environment = {
 function httpOptions(): Object {
   var headers_object = new HttpHeaders();
   headers_object.append('Content-Type', 'application/json');
-  //headers_object.append("Authorization", "Basic " + btoa("surya:test"));
   const httpOptions = {
     headers: headers_object
   };

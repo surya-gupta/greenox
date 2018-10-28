@@ -1,7 +1,7 @@
-<mat-tab-group [backgroundColor]="backgroundColor" dynamicHeight mat-stretch-tabs>
-  <mat-tab>
+<mat-tab-group [backgroundColor]="backgroundColor" dynamicHeight mat-stretch-tabs class="mat-tab-group">
+  <mat-tab matBadge="{{noOfOrderOpen}}" matBadgeColor="warn" matBadgePosition="before">
     <ng-template mat-tab-label *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
-      <span matBadge="{{noOfOrderOpen}}" matBadgeOverlap="false" matBadgeColor="warn">Open</span>
+      <span matBadge="{{noOfOrderOpen}}" matBadgeColor="warn" >Open</span>
     </ng-template>
     <app-order-open (noOfOrderOpen)="updateNoOfOpenOrders($event)"></app-order-open>
     <br />
@@ -9,7 +9,7 @@
   </mat-tab>
   <mat-tab *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
     <ng-template mat-tab-label>
-      Create
+      <span class="mat-tab-label">Create</span>
     </ng-template>
     <app-order-create></app-order-create>
     <br />
@@ -17,7 +17,7 @@
   </mat-tab>
   <mat-tab *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
     <ng-template mat-tab-label>
-      View
+      <span class="mat-tab-label">View</span>
     </ng-template>
     <app-order-view></app-order-view>
     <br />
@@ -25,10 +25,10 @@
   </mat-tab>
   <mat-tab *ngIf="containsAuthority('ROLE_ORDER_ENTRY')">
     <ng-template mat-tab-label>
-      Sales Reports
+      <span class="mat-tab-label">Sales Reports</span>
     </ng-template>
     <app-order-reports></app-order-reports>
-    <br/>
-    <br/>
+    <br />
+    <br />
   </mat-tab>
 </mat-tab-group>
