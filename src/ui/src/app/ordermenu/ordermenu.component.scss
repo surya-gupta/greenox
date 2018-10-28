@@ -5,7 +5,7 @@ body{
     font-size: 14px;
     line-height: 1.2;
 }
-::after, ::before {
+*,::after, ::before {
     box-sizing: border-box;
 }
 a, a:focus, a:hover, a:visited {
@@ -15,6 +15,7 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
+
 .content{
     display: flex;
     display: -webkit-box;
@@ -41,9 +42,18 @@ a {
     right: 0;
     border-right: 1px solid #e9e9eb;
 }
-.leftContainer_2{
-    height: 100%;
-    max-height: calc(100vh - 197px);
+.cart {
+
+    width: 298px;
+    padding: 26px 10px 0;
+    height: calc(100vh - 392px);
+    transition: height .4s ease;
+    contain: layout;
+
+}
+.leftContainer_2, .cart{
+    // height: 100%;
+    height: calc(100vh - 197px);
 }
 .leftContainer_2::after {
     content: "";
@@ -100,7 +110,7 @@ a {
 .categorySelected{
     color: #04a040;
 }
-.stick{
+.stick, .cart{
     margin-top: 12px;
     top:140px;
     position: relative;
@@ -159,6 +169,7 @@ a {
 .padBottom{
     padding-bottom: 2px;
 }
+
 .categoryHeader{
     margin: 0;
     padding: 26px 0 32px;
@@ -378,4 +389,174 @@ a {
 .animAddQuant {
     -webkit-animation: addQant .2s ease;
     animation: addQuant .2s ease;
+}
+
+.cartItem{
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+}
+.cartItemHeader{
+    color:#282c3f;
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 18px;
+}
+.cartItemCount {
+    font-weight: 500;
+    font-size: 13px;
+    color: #686b78;
+    text-transform: uppercase;
+    padding-top: 2px;
+}
+.cartItemList{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    overflow-y: hidden;
+}
+.margin-10y{
+    margin:0 -10px; 
+}
+.padding16{
+    padding: 0 16px 0 16px;
+}
+.itemList{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.itemListMargin {
+
+    margin-left: -4px;
+    margin-right: -6px;
+
+}
+.singleItem{
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+.singleItemDesc {
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+     flex-grow: 1;
+     font-weight: 400;
+     margin-left: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+   
+}
+.singleItemPrice{
+    font-size: 13px;
+    color: #535665;
+    text-align: right;
+    width: 45px;
+
+}
+
+.singleItemQuantity {
+
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width:120px;
+
+}
+.cartItemAdd {
+
+    width: 70px !important;
+    font-size: 12px !important;
+    display: block !important;
+
+}
+.currentSymbol::before {
+  content: "\20B9";
+}
+.cartTotal {
+
+    margin-top: 17px;
+    min-height: 115px;
+
+}
+.cartSubTotal {
+
+    color: #3d4152;
+    font-size: 15px;
+    font-weight: 600;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+.cartSubTotalText{
+    font-size: 17px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.cartTotalPrice {
+
+    color: #bebfc5;
+    text-decoration: line-through;
+    margin-right: 10px;
+
+}
+.checkout {
+
+    height: 50px;
+    background-color: #60b246;
+    outline: 0;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    margin-top: 28px;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+
 }
