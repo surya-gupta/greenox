@@ -1,3 +1,8 @@
-<p>
-  update works!
-</p>
+<h3 mat-dialog-title>Inventory Order Details</h3>
+<div mat-dialog-content>
+  {{_order|json}}
+</div>
+<div mat-dialog-actions class="mat-dialog-actions">
+  <button mat-raised-button (click)="onNoClick()" color="warn">Close</button>
+  <button mat-raised-button [mat-dialog-close]="submited" cdkFocusInitial  color="primary">Save</button>
+</div>

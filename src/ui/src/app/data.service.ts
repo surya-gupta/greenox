@@ -39,6 +39,11 @@ export class DataService {
     return this.http.post<InventoryOrder>(url, inventory)
   }
 
+  getInventoryOrders(filterCriteria){
+    var url = `${this.baseURL}/inventory/search`
+    return this.http.post<InventoryOrder[]>(url, filterCriteria)
+  }
+  
   getAllVendor() {
     var url = `${this.baseURL}/inventory/vendor/all`
     return this.http.get<Vendor[]>(url)

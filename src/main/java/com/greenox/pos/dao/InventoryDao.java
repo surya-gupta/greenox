@@ -95,6 +95,7 @@ public class InventoryDao implements InitializingBean {
         inventoryOrder.setEntryTime(LocalDateTime.now());
         inventoryOrder.setAddedBy(SecurityContextHolder.getContext().getAuthentication().getName());
         inventoryOrder.setInvNum(orderCountOnDay()+1);
+        inventoryOrder.setStatus(Constants.INVENTORY_STATUS.NEW);
         InventoryOrder order = inventoryOrderRepository.save(inventoryOrder);
         return order;
     }

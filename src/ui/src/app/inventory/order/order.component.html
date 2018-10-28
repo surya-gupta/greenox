@@ -105,7 +105,7 @@
 </form>
 <div *ngIf="success">
   <br />
-  <span *ngIf="invNum">Yay! We received your new inventory order {{invNum}} . Wnat to order order more inventory ?
+  <span *ngIf="invNum">Yay! We received your new inventory order #{{invNum}} . Want to  order more inventory ?
     <button mat-button (click)="formReset()"><i class="material-icons">done</i></button></span>
   <span *ngIf="invNum == undefined">Check If all details are filled. Unable to submit Inventory Order. Try Again ?
     <button mat-button (click)="formReset()"><i class="material-icons">done</i></button> </span>

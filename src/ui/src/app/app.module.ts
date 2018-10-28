@@ -45,7 +45,8 @@ import { VendorFormComponent } from './inventory/vendors/vendor-form/vendor-form
     OrderUpdateComponent,
     OrderViewComponent,
     DailogComponent,
-    VendorFormComponent
+    VendorFormComponent,
+    InventoryUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +58,6 @@ import { VendorFormComponent } from './inventory/vendors/vendor-form/vendor-form
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [DailogComponent,VendorFormComponent]
+  entryComponents: [DailogComponent, VendorFormComponent, InventoryUpdateComponent]
 })
 export class AppModule { }

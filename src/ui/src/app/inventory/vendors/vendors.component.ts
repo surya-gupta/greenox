@@ -12,7 +12,6 @@ import { VendorFormComponent } from './vendor-form/vendor-form.component';
 export class InventoryVendorsComponent implements OnInit {
 
   currentVendor: Vendor
-  text: string
   vendors: Vendor[]
   dataSource = new MatTableDataSource(this.vendors);
   @ViewChild(MatPaginator) paginator: MatPaginator;
