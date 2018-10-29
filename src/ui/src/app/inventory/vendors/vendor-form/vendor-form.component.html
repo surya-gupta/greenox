@@ -1,0 +1,31 @@
+<h3 mat-dialog-title>Vendor Details</h3>
+<div mat-dialog-content>
+  <form [formGroup]="vendorForm" class="form" (ngSubmit)="submitHandler()">
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Vendor Name" formControlName="name" required>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Type</mat-label>
+      <mat-select formControlName="type" required>
+        <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="Phone Number" formControlName="phoneNumber" required type="number">
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Email Id</mat-label>
+      <input matInput placeholder="Email" formControlName="emailId" type="email">
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="outline">
+      <mat-label>Description(Role/Duties/Tasks)</mat-label>
+      <textarea matInput placeholder="Mention some vendor duties and work tasks" formControlName="description" required></textarea>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="mat-dialog-actions">
+  <button mat-raised-button (click)="onNoClick()" color="warn">Close</button>
+  <button mat-raised-button [mat-dialog-close]="submited" cdkFocusInitial [disabled]="vendorForm.invalid" (click)="submitHandler()" color="primary" >Save</button>
+</div>
