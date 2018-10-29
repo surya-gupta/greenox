@@ -1,0 +1,12 @@
+<h3 mat-dialog-title>Reason for {{data.task}} to {{data.action}} ?</h3>
+<div mat-dialog-content>
+  <form [formGroup]="dialog" class="form">
+    <mat-form-field class="full-width">
+      <input matInput formControlName="reason" (change)="updateReason()" required autocomplete="off" maxlength="160" minlength="5">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="mat-dialog-actions">
+  <button mat-raised-button (click)="onNoClick()" color="warn">Close</button>
+  <button mat-raised-button [mat-dialog-close]="data.reason" cdkFocusInitial [disabled]="dialog.invalid" color="primary">{{data.action}} {{data.task}}</button>
+</div>
