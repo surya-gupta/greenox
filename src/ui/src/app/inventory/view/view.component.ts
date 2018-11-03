@@ -1,10 +1,10 @@
 import { DataService } from 'src/app/data.service';
-import { Vendor } from 'src/app/shared/vendor';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { MatDialog, MatSnackBar } from '@angular/material';
 import { InventoryOrder } from 'src/app/shared/inventory-order';
 import { InventoryUpdateComponent } from '../update/update.component';
+import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-inventory-view',
   templateUrl: './view.component.html',
@@ -16,8 +16,11 @@ export class InventoryViewComponent implements OnInit {
   currentOrder: InventoryOrder
   dataSource = new MatTableDataSource(this.inventoryOrders);
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  pageSizeOptions: number[] = [5, 10, 25, 50];
+  pageSizeOptions: number[] = [25, 50, 75, 100];
   displayedColumns: string[] = ['entryTime', 'invNum', 'vendor.name', 'vendor.phoneNumber', 'advanceAmount', 'netAmount', 'pendingAmount', 'paymentMode', 'status', 'completionTime', 'id'];
+
+  searchForm : FormGroup
+  
   constructor(private data: DataService, public dialog: MatDialog, public snackBar: MatSnackBar) { }
 
   ngOnInit() {

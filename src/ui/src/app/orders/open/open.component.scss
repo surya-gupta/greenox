@@ -1,59 +1,72 @@
-table{
+table {
     background-color: white;
     padding: 10px;
     border-style: none;
-    border-color:white;
+    border-color: white;
     text-align: center;
     font-family: 'Ubuntu Mono', monospace;
-    .order-gap{
-      padding: 0px;
+    .order-gap {
+        padding: 0px;
     }
-.late{
-animation:blinkingText 1s infinite;
-}
-    tr:nth-child(even){
-      text-align: right;
+    .late {
+        animation: blinkingText 1s infinite;
     }
-    .right-allign{
-      text-align: right;
+    tr:nth-child(even) {
+        text-align: right;
     }
-    td{
-      margin: 5px;
-      border-style: none;
-      border-color:white;
-      text-align: center;
-      border-bottom-color: #4CAF50;
-      padding: 10px;
+    .right-allign {
+        text-align: right;
+    }
+    td {
+        margin: 5px;
+        border-style: none;
+        border-color: white;
+        text-align: center;
+        border-bottom-color: #4CAF50;
+        padding: 10px;
     }
     th {
-      margin: 5px;
-      border-radius: 8px 4px 8px 4px;
-      text-shadow: .5px .5px;
-      background-color: #4CAF50;
-      color: white;
-      padding: 8px;
+        margin: 5px;
+        border-radius: 8px 4px 8px 4px;
+        text-shadow: .5px .5px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px;
     }
-    li{
-      list-style: lower-roman;
-      text-align: left;
-      margin-left: 15px;
+    li {
+        list-style: lower-roman;
+        text-align: left;
+        margin-left: 15px;
     }
 }
-mat-chip{
+
+mat-chip {
     font-family: 'Ubuntu Mono', monospace;
     margin: 5px;
     border-radius: 8px 4px 8px 4px;
     padding: 5px;
     font-size: 20px;
 }
-h1{
-font-family: 'Ubuntu Mono', monospace;
-padding: 5px;
+
+h1 {
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 5px;
 }
-@keyframes blinkingText{
-0%{     color: red;    }
-49%{    color: pink; }
-50%{    color: maroon; }
-60%{    color:red;  }
-100%{   color: black;    }
+
+@keyframes blinkingText {
+    0% {
+        color: red;
+    }
+    49% {
+        color: pink;
+    }
+    50% {
+        color: maroon;
+    }
+    60% {
+        color: red;
+    }
+    100% {
+        color: black;
+    }
 }

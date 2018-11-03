@@ -1,33 +1,29 @@
 nav {
     background: #2D2E2E;
     height: 100%;
-
     ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
-
         li {
-
             a {
                 color: #fff;
                 padding: 10px;
                 display: block;
             }
-
             .activated {
                 background-color: #4CAF50;
             }
         }
-
-        li:last-child{
-            position:absolute; bottom:0;left: 0;
-            img{
+        li:last-child {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            img {
                 height: 30px;
                 width: 30px;
                 padding: 10px;
             }
         }
     }
-    
 }

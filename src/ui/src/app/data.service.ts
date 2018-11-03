@@ -16,7 +16,8 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getLoginDetails() {
-    return this.http.get<User>('api/user')
+    var url = `${this.baseURL}/user`
+    return this.http.get<User>(url)
   }
 
   getOrders(): Observable<OrderAndSummary> {

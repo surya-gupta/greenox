@@ -1,21 +1,21 @@
-form{
+form {
     font-family: 'Ubuntu Mono', monospace;
-    padding: 20px;
-    margin:20px;
-
-    fieldset{
+    padding: 5px;
+    margin: 5px;
+    fieldset {
         border: none;
         border-style: none;
         padding: 0px;
         margin: 0px;
-        font-size: 15px;
+        font-size: 12px;
         width: 100%;
     }
-
-    fieldset mat-form-field,mat-select{
+    fieldset mat-form-field,
+    mat-select {
         font-family: 'Ubuntu Mono', monospace;
     }
-    mat-select,mat-option{
+    mat-select,
+    mat-option {
         font-family: 'Ubuntu Mono', monospace;
     }
     .form {
@@ -23,29 +23,126 @@ form{
         min-width: 150px;
         max-width: 300px;
         width: 100%;
-      }
-      
-      .full-width {
-        width: 100%;
-      }
-      button{
-padding: 5px 10px 5px 10px;
-margin: 5px;
-          font-family: 'Ubuntu Mono', monospace;
-font-size: 18px;
-      }
-
-      mat-tab-group,mat-tab,mat-form-field{
-        font-size: 18px;
-        padding: 5px;
-        font-family: 'Ubuntu Mono', monospace;
-        min-width: 150px;
-        max-width: 800px;
-        height: 100%;
     }
-.hidden {display:none;}
-}
-p,div,mat-select,mat-option,h1{
-    font-family: 'Ubuntu Mono', monospace;
+    .full-width {
+        width: 100%;
+    }
+    button {
+        padding: 5px 10px 5px 10px;
+        margin: 5px;
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 12px;
+    }
+    mat-tab-group,
+    mat-tab,
+    mat-form-field,
+    .mat-tab-label,
+    .mat-tab {
+        font-size: 12px;
+        padding: 2px;
+        margin: 2px;
+        font-family: 'Ubuntu Mono', monospace;
+        text-align: left;
+    }
+    .hidden {
+        display: none;
+    }
 }
 
+p,
+div,
+mat-select,
+mat-option,
+h1 {
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: left;
+}
+
+:host {
+    >.container {
+        max-width: 1264px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        float: left;
+    }
+    /deep/ {
+        .mat-tab-group {
+            flex-direction: row;
+            float: left;
+            text-align: left;
+        }
+        .mat-tab-header {
+            border-bottom: none;
+            float: left;
+            text-align: left;
+        }
+        .mat-tab-header-pagination {
+            display: none !important;
+            float: left;
+            text-align: left;
+        }
+        .mat-tab-labels {
+            flex-direction: column;
+            float: left;
+            text-align: left;
+        }
+        .mat-ink-bar {
+            height: 100%;
+            left: 98% !important;
+            float: left;
+            text-align: left;
+        }
+        .mat-tab-body-wrapper {
+            flex: 1 1 auto;
+            float: left;
+            text-align: left;
+        }
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    flex: 1 0 auto;
+    margin: 0 auto;
+    text-align: left;
+    float: left;
+}
+
+#content {
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding: 12px;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: left;
+    float: left;
+}
+
+#content {
+    max-width: 1100px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: left;
+    float: left;
+}
+
+#content,
+#main-content {
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+        text-align: left;
+    }
+    &::after {
+        clear: both;
+    }
+    float: left;
+    text-align: left;
+}

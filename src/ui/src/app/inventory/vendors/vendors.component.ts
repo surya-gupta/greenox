@@ -15,7 +15,7 @@ export class InventoryVendorsComponent implements OnInit {
   vendors: Vendor[]
   dataSource = new MatTableDataSource(this.vendors);
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  pageSizeOptions: number[] = [5, 10, 25, 50];
+  pageSizeOptions: number[] = [25, 50, 75, 100];
   displayedColumns: string[] = ['name', 'phoneNumber', 'emailId', 'status', 'type', 'description', 'id'];
   constructor(private data: DataService, public dialog: MatDialog, public snackBar: MatSnackBar) { }
 

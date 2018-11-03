@@ -3,6 +3,7 @@ import { CategorizedInventory } from 'src/app/shared/categorizedInventory';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { DataService } from 'src/app/data.service';
 import { Vendor } from 'src/app/shared/vendor';
+import { DISABLED } from '@angular/forms/src/model';
 
 @Component({
   selector: 'app-inventory-order',
@@ -18,7 +19,7 @@ export class InventoryOrderComponent implements OnInit {
   inventory: FormGroup
   loading = false
   success = false
-
+  itemFilter: string
   categoryBackGround = "accent"
 
   constructor(private fb: FormBuilder, private data: DataService) { }
@@ -39,11 +40,13 @@ export class InventoryOrderComponent implements OnInit {
       }
     )
   }
+
   loadAndSetForm() {
     this.createBaseForm()
     this.loadVendors()
     this.loadInventory()
   }
+
   ngOnInit() {
     this.loadAndSetForm()
   }
@@ -52,7 +55,7 @@ export class InventoryOrderComponent implements OnInit {
     this.inventory = this.fb.group({
       vendor: this.fb.group({
         id: [null],
-        name:new FormControl({ value: null, disabled: true }),
+        name: new FormControl({ value: null, disabled: true }),
         phoneNumber: new FormControl({ value: null, disabled: true }),
         description: new FormControl({ value: null, disabled: true }),
         emailId: new FormControl({ value: null, disabled: true }),
@@ -91,7 +94,7 @@ export class InventoryOrderComponent implements OnInit {
     var itemsForm = categoryForm.get('inventoryItems') as FormArray
     category.inventoryItems.forEach(data => {
       var itemForm = this.fb.group({
-        item: [data],
+        item: new FormControl({ value: data, disabled: false }),
         orderQuantity: [0],
         receivedQuantity: [0],
         costPerUnit: [0],
@@ -155,5 +158,9 @@ export class InventoryOrderComponent implements OnInit {
     } else {
       this.inventory.get("paymentMode").enable()
     }
+  }
+
+  applyFilter(text) {
+    this.itemFilter = text
   }
 }

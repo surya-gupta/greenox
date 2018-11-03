@@ -1,11 +1,16 @@
-div,button,h3,input{
+div,
+button,
+h3,
+input {
     font-family: 'Ubuntu Mono', monospace;
 }
-.mat-dialog-actions{
-    float:right;
+
+.mat-dialog-actions {
+    float: right;
     padding: 2px;
     margin: 5px;
-  }
-  .full-width {
+}
+
+.full-width {
     width: 100%;
-  }
+}
