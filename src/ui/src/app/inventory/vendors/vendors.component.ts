@@ -16,7 +16,7 @@ export class InventoryVendorsComponent implements OnInit {
   dataSource = new MatTableDataSource(this.vendors);
   @ViewChild(MatPaginator) paginator: MatPaginator;
   pageSizeOptions: number[] = [25, 50, 75, 100];
-  displayedColumns: string[] = ['name', 'phoneNumber', 'emailId', 'status', 'type', 'description', 'id'];
+  displayedColumns: string[] = ['name', 'phoneNumber', 'emailId', 'status', 'type', 'description'];
   constructor(private data: DataService, public dialog: MatDialog, public snackBar: MatSnackBar) { }
 
   ngOnInit() {

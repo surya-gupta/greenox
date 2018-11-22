@@ -4,7 +4,6 @@ table {
     border-style: none;
     border-color: white;
     text-align: center;
-    font-family: 'Ubuntu Mono', monospace;
     .order-gap {
         padding: 0px;
     }
@@ -41,7 +40,6 @@ table {
 }
 
 mat-chip {
-    font-family: 'Ubuntu Mono', monospace;
     margin: 5px;
     border-radius: 8px 4px 8px 4px;
     padding: 5px;
@@ -49,7 +47,6 @@ mat-chip {
 }
 
 h1 {
-    font-family: 'Ubuntu Mono', monospace;
     padding: 5px;
 }
 

@@ -3,18 +3,11 @@ table {
     td,
     th {
         margin: 5px;
-        font-family: 'Ubuntu Mono', monospace;
     }
 }
 
-mat-paginator,
-input,
-mat-form-field {
-    font-family: 'Ubuntu Mono', monospace;
-}
 
 .filter-input {
     font-size: 14px;
     width: 100%;
-    font-family: 'Ubuntu Mono', monospace;
 }

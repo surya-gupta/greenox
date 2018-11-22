@@ -9,7 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 
 @Document(collection = "vendor")
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Vendor {
     @Id
     private String id;

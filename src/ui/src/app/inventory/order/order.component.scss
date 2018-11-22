@@ -1,5 +1,4 @@
 form {
-    font-family: 'Ubuntu Mono', monospace;
     padding: 5px;
     margin: 5px;
     fieldset {
@@ -7,19 +6,9 @@ form {
         border-style: none;
         padding: 0px;
         margin: 0px;
-        font-size: 12px;
         width: 100%;
     }
-    fieldset mat-form-field,
-    mat-select {
-        font-family: 'Ubuntu Mono', monospace;
-    }
-    mat-select,
-    mat-option {
-        font-family: 'Ubuntu Mono', monospace;
-    }
     .form {
-        font-family: 'Ubuntu Mono', monospace;
         min-width: 150px;
         max-width: 300px;
         width: 100%;
@@ -30,33 +19,18 @@ form {
     button {
         padding: 5px 10px 5px 10px;
         margin: 5px;
-        font-family: 'Ubuntu Mono', monospace;
-        font-size: 12px;
     }
     mat-tab-group,
     mat-tab,
-    mat-form-field,
-    .mat-tab-label,
-    .mat-tab {
-        font-size: 12px;
+    mat-form-field {
         padding: 2px;
         margin: 2px;
-        font-family: 'Ubuntu Mono', monospace;
-        text-align: left;
     }
     .hidden {
         display: none;
     }
 }
 
-p,
-div,
-mat-select,
-mat-option,
-h1 {
-    font-family: 'Ubuntu Mono', monospace;
-    text-align: left;
-}
 
 :host {
     >.container {

@@ -67,7 +67,7 @@
   <div class="container">
     <div id="content">
       <div id="main-content">
-        <mat-tab-group formArrayName="categorisedItems" [backgroundColor]="categoryBackGround" (selectedTabChange)="applyFilter(undefined)">
+        <mat-tab-group formArrayName="categorisedItems" [backgroundColor]="categoryBackGround" (selectedTabChange)="applyFilter(undefined)" dynamicHeight>
           <mat-tab *ngFor="let category of categorisedItemsForm.controls; let i = index;" class="mat-tab">
             <br />
             <div [formGroupName]="i">

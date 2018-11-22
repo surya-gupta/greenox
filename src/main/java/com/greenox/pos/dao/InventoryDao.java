@@ -113,6 +113,9 @@ public class InventoryDao implements InitializingBean {
         if (searchCriteria.containsKey("invNum")) {
             criteria.and("invNum").is(searchCriteria.get("invNum"));
         }
+        if (searchCriteria.containsKey("status")) {
+            criteria.and("status").is(searchCriteria.get("status"));
+        }
         MatchOperation matchStage = Aggregation.match(criteria);
         SortOperation sortByEntryTimeDesc = sort(new Sort(Sort.Direction.DESC, "entryTime"));
         Aggregation aggregation = Aggregation.newAggregation(matchStage,sortByEntryTimeDesc);

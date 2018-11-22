@@ -11,10 +11,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRippleModule } from '@angular/material/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
-    imports: [MatPaginatorModule, MatTableModule, MatButtonModule, MatGridListModule, MatCardModule, MatChipsModule, MatTabsModule, MatBadgeModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatDialogModule, MatSnackBarModule, MatRippleModule, MatTooltipModule],
-    exports: [MatPaginatorModule, MatTableModule, MatButtonModule, MatGridListModule, MatCardModule, MatChipsModule, MatTabsModule, MatBadgeModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatDialogModule, MatSnackBarModule, MatRippleModule, MatTooltipModule]
+    imports: [MatDatepickerModule, MatPaginatorModule, MatTableModule, MatButtonModule, MatGridListModule, MatCardModule, MatChipsModule, MatTabsModule, MatBadgeModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatDialogModule, MatSnackBarModule, MatRippleModule, MatTooltipModule],
+    exports: [MatDatepickerModule, MatPaginatorModule, MatTableModule, MatButtonModule, MatGridListModule, MatCardModule, MatChipsModule, MatTabsModule, MatBadgeModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatDialogModule, MatSnackBarModule, MatRippleModule, MatTooltipModule]
 })
 
 export class MaterialModule {

@@ -1,31 +1,3 @@
-form {
-    font-family: 'Ubuntu Mono', monospace;
-    mat-tab-group,
-    mat-tab,
-    mat-form-field,
-    button,
-    mat-select,
-    mat-option {
-        font-size: 18px;
-        padding: 5px;
-        font-family: 'Ubuntu Mono', monospace;
-        display: block;
-    }
-}
-
-p,
-div,
-mat-select,
-mat-option {
-    font-family: 'Ubuntu Mono', monospace;
-}
-
-div,
-button,
-h3,
-input {
-    font-family: 'Ubuntu Mono', monospace;
-}
 
 .mat-dialog-actions {
     margin: 5px;

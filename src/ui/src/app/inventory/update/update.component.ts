@@ -45,6 +45,7 @@ export class InventoryUpdateComponent implements OnInit {
     this.loadVendors()
     this.loadInventory()
   }
+
   ngOnInit() {
   }
 
@@ -78,7 +79,7 @@ export class InventoryUpdateComponent implements OnInit {
   loadVendors() {
     this.data.getAllVendor().subscribe(
       data => {
-        this.vendors = data
+        this.vendors = data.filter(record=>record.status!='Discontinued')
       }
     )
   }
